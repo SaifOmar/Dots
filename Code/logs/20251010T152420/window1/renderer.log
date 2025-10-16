@@ -1,0 +1,66 @@
+2025-10-10 15:24:22.931 [info] Started local extension host with pid 79485.
+2025-10-10 15:24:28.152 [error] [Extension Host] (node:79485) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `exe --trace-warnings ...` to show where the warning was created)
+2025-10-10 15:24:28.927 [info] Extension host (LocalProcess pid: 79485) is unresponsive.
+2025-10-10 15:24:29.016 [info] [perf] Render performance baseline is 55ms
+2025-10-10 15:24:30.091 [info] Extension host (LocalProcess pid: 79485) is responsive.
+2025-10-10 15:24:30.389 [info] Settings Sync: Account status changed from uninitialized to available
+2025-10-10 15:24:30.978 [error] [Extension Host] Failed to load MSAL binary: Error: Cannot find module './msal-node-runtime'
+Require stack:
+- /opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js
+- /opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js
+	at Module._resolveFilename (node:internal/modules/cjs/loader:1372:15)
+	at n._resolveFilename (node:electron/js2c/utility_init:2:16249)
+	at t._resolveFilename (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22931)
+	at defaultResolveImpl (node:internal/modules/cjs/loader:1028:19)
+	at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1033:22)
+	at Module._load (node:internal/modules/cjs/loader:1182:37)
+	at c._load (node:electron/js2c/node_init:2:17993)
+	at e._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+	at t._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+	at r._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+	at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+	at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+	at Module.require (node:internal/modules/cjs/loader:1452:12)
+	at Module.require (/home/saif/.vscode/extensions/github.copilot-chat-0.31.5/dist/extension.js:81:36096)
+	at require (node:internal/modules/helpers:135:16)
+	at 7247 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:231600)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 9020 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:526968)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 6244 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:215773)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 3226 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:129004)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 2583 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:105051)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 8428 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:452019)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 5256 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:172891)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at /opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559691
+	at Object.<anonymous> (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559798)
+	at Module._compile (node:internal/modules/cjs/loader:1696:14)
+	at Module._extensions..js (node:internal/modules/cjs/loader:1829:10)
+	at Module.load (node:internal/modules/cjs/loader:1430:32)
+	at Module._load (node:internal/modules/cjs/loader:1253:12)
+	at c._load (node:electron/js2c/node_init:2:17993)
+	at e._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+	at t._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+	at r._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+	at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+	at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+	at Module.require (node:internal/modules/cjs/loader:1452:12)
+	at Module.require (/home/saif/.vscode/extensions/github.copilot-chat-0.31.5/dist/extension.js:81:36096)
+	at require (node:internal/modules/helpers:135:16)
+	at aJ.Cb (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:240:1253)
+2025-10-10 15:24:36.043 [info] Extension host (LocalProcess pid: 79485) is unresponsive.
+2025-10-10 15:24:37.492 [error] Canceled: Canceled
+    at QC (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:7:1282)
+    at vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3718:37249
+    at Array.forEach (<anonymous>)
+    at ALt.dispose (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3718:37189)
+    at sAe.dispose (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3718:48866)
+    at Ppn.dispose (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3725:7731)
+    at Npn.stopAllInReverse (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3725:7033)
+    at async gxt.tb (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3724:15899)

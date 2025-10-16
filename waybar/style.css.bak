@@ -1,0 +1,210 @@
+/* Import theme variables */
+
+@import "../omarchy/current/theme/waybar.css";
+
+/* --- Global Reset & Font --- */
+* {
+    border: none;
+    border-radius: 0;
+    /* Using a more modern, common font. Adwaita Mono is great, but Inter is a popular choice for UI. */
+    /* You can change this to your preferred font. */
+    font-family: 'JetBrainsMono Nerd Font';
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* --- The Bar Itself --- */
+window#waybar {
+    /* Make the bar a floating, rounded container */
+    background-color: alpha(@background, 0.75); /* Slightly less transparent for readability */
+    color: @foreground;
+    border-radius: 12px; /* A single, consistent radius for the whole bar */
+    margin: 6px 8px; /* Margin to make the bar "float" */
+    
+    /* Add a subtle border to lift the bar off the wallpaper */
+    border: 1px solid alpha(@foreground, 0.1);
+    
+    /* Smooth transitions for any property changes */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Workspaces --- */
+#workspaces {
+    background-color: alpha(@foreground, 0.08);
+    margin: 4px;
+    padding: 0 4px;
+    border-radius: 8px;
+}
+
+#workspaces button {
+    padding: 1px 8px;
+    margin: 4px 2px;
+    background-color: transparent;
+    color: @foreground;
+    border-radius: 8px; /* Consistent rounding */
+    
+    /* Smooth transition for hover and focus changes */
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    background: alpha(@foreground, 0.15);
+    color: @foreground;
+}
+
+#workspaces button.empty {
+    /* Make empty workspaces less prominent */
+    opacity: 0.5;
+}
+
+#workspaces button.focused {
+    /* Make the focused workspace really stand out */
+    opacity: 1;
+    background-color: @color4; /* Use a theme accent color */
+    color: @background; /* Use a contrasting color for text */
+    padding: 2px 12px; /* Make it slightly larger to pop */
+}
+
+#workspaces button.urgent {
+    background-color: @color1; /* Use a theme warning color */
+    color: @background;
+}
+
+
+/* --- General Module Styling ("Pills") --- */
+#clock,
+#backlight,
+#cpu,
+#memory,
+#network,
+#tray,
+#mpris,
+#custom-power,
+#power-profiles-daemon,
+#bluetooth,
+#battery,
+#window,
+#custom-launcher,
+#custom-hyprsunset,
+#custom-omarchy {
+    padding: 0 12px;
+    margin: 4px 0px; /* Vertical margin, horizontal handled by module groups */
+    color: @foreground;
+    
+    /* Smooth transitions for hover effects */
+    transition: all 0.3s ease;
+}
+#pulseaudio {
+    padding: 0 17px 0 12px;
+    margin: 4px 0px; /* Vertical margin, horizontal handled by module groups */
+    color: @foreground;
+    /* Smooth transitions for hover effects */
+    transition: all 0.3s ease;
+}
+
+/* --- Module Groups --- */
+/* This creates a single "pill" for related modules */
+#cpu, #memory, #backlight, #pulseaudio, #network, #bluetooth, #battery {
+    background-color: alpha(@foreground, 0.08);
+}
+
+/* Round the corners of the first and last module in a group */
+/* Adjust these selectors based on your bar's module order */
+#cpu {
+    border-radius: 8px 0 0 8px;
+    padding-left: 12px;
+}
+
+#memory {
+    border-radius: 0 8px 8px 0;
+    /* Add a subtle separator between modules in a group */
+    border-left: 1px solid alpha(@foreground, 0.15);
+}
+
+#battery {
+    border-radius: 0 8px 8px 0;
+}
+
+/* --- Individual Modules --- */
+#clock {
+    background-color: alpha(@foreground, 0.08);
+    border-radius: 8px;
+    margin-right: 8px; /* Give end modules some space */
+}
+
+#tray {
+    background-color: alpha(@color3, 0.15);
+    border-radius: 8px;
+    margin-right: 8px;
+    padding: 0 10px;
+}
+
+#custom-power {
+    color: @foreground;
+    background-color: @color1; /* Make the power button stand out */
+    border-radius: 8px;
+    margin-right: 8px;
+}
+#custom-power:hover {
+    /* This overlays a 15% transparent white layer to "lighten" the color underneath */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
+
+
+#custom-launcher {
+    color: @foreground;
+    background-color: @color4; /* Match the launcher to the focused workspace */
+    border-radius: 8px;
+    margin-left: 8px;
+    font-size: 16px; /* Make the icon slightly bigger */
+}
+#custom-launcher:hover {
+    /* We use the same trick here for a consistent hover effect */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
+
+#custom-omarchy {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* --- Hover Effects --- */
+/* A generic hover for modules that don't have a special one */
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#backlight:hover,
+#power-profiles-daemon:hover,
+#custom-hyprsunset:hover,
+#bluetooth:hover,
+#battery:hover {
+    background-color: alpha(@foreground, 0.15);
+}
+
+/* --- Specific Module Tweaks --- */
+#mpris {
+    color: @foreground;
+    font-style: italic;
+    padding: 0 10px;
+}
+
+#backlight-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#backlight-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background-color: black;
+}
+#backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: red;
+}

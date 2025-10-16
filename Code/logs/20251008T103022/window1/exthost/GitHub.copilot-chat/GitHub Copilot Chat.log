@@ -1,0 +1,367 @@
+2025-10-08 10:30:37.345 [info] [GitExtensionServiceImpl] Initializing Git extension service.
+2025-10-08 10:30:37.346 [info] Using the Electron fetcher.
+2025-10-08 10:30:37.346 [info] [GitExtensionServiceImpl] Successfully activated the vscode.git extension.
+2025-10-08 10:30:37.346 [info] [GitExtensionServiceImpl] Enablement state of the vscode.git extension: true.
+2025-10-08 10:30:37.346 [info] [GitExtensionServiceImpl] Successfully registered Git commit message provider.
+2025-10-08 10:30:54.969 [info] Logged in as SaifOmar
+2025-10-08 10:30:55.165 [info] GithubAvailableEmbeddingTypesManager: Got embeddings. Primary: metis-1024-I16-Binary,text-embedding-3-small-512. Deprecated: 
+2025-10-08 10:30:55.171 [info] GithubAvailableEmbeddingTypesManager: Got embeddings. Primary: metis-1024-I16-Binary,text-embedding-3-small-512. Deprecated: 
+2025-10-08 10:30:55.171 [info] WorkspaceChunkSearchService: using embedding type metis-1024-I16-Binary
+2025-10-08 10:30:55.509 [info] FetcherService: electron-fetch succeeded
+2025-10-08 10:30:55.510 [info] FetcherService: electron-fetch succeeded
+2025-10-08 10:30:55.512 [info] Got Copilot token for SaifOmar
+2025-10-08 10:30:55.540 [info] activationBlocker from 'languageModelAccess' took for 15999ms
+2025-10-08 10:30:56.352 [info] copilot token chat_enabled: true, sku: free_limited_copilot
+2025-10-08 10:30:56.352 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:30:56.399 [info] Registering default platform agent...
+2025-10-08 10:30:56.401 [info] activationBlocker from 'conversationFeature' took for 16869ms
+2025-10-08 10:30:56.418 [info] Fetched model metadata in 2960ms 780b5bd1-34e8-43b2-9a71-057fc7ce31f8
+2025-10-08 10:30:56.466 [info] Latest entry: ccreq:latest.copilotmd
+2025-10-08 10:30:56.467 [info] ccreq:0dcecc6d.copilotmd | markdown
+2025-10-08 10:30:56.604 [info] BYOK: Copilot Chat known models list fetched successfully.
+2025-10-08 10:30:56.887 [info] Fetched auto model in 238ms.
+2025-10-08 10:31:02.267 [info] Refetch model metadata: Succeeded in 553ms c7a2b6a8-0940-461d-b3dc-394ff2453e35 (D5FC:30F5D6:451D02:536CF8:68E61335) using electron-fetch with status 200.
+2025-10-08 10:31:02.882 [info] Refetch model metadata: Succeeded in 606ms f20a81e0-2df5-4b31-bb0a-b7ea9822c6a1 (D60A:3B9816:49E73E:581E5D:68E61336) using node-fetch with status 200.
+2025-10-08 10:31:03.505 [info] Refetch model metadata: Succeeded in 619ms 6698d06d-a730-4d73-8d3d-6409c72785a0 (D612:3B9816:49E90F:58208A:68E61337) using node-http with status 200.
+2025-10-08 10:36:56.331 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:36:56.340 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:36:56.453 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:36:56.453 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:36:56.508 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:36:56.508 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:36:56.550 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:36:56.550 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:36:56.591 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:36:56.591 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:36:56.741 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:36:56.741 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:03.024 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:37:03.024 [info] request done: requestId: [237cc120-6663-4752-8f5d-3eef3d1ce389] model deployment ID: []
+2025-10-08 10:37:03.030 [info] ccreq:5fa6bd6c.copilotmd | success | claude-3.5-sonnet | 5923ms | [panel/editAgent]
+2025-10-08 10:37:03.705 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:03.706 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:03.772 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:03.773 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:03.793 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:03.794 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:03.825 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:03.825 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:03.845 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:03.845 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:09.864 [info] message 0 returned. finish reason: [stop]
+2025-10-08 10:37:09.864 [info] request done: requestId: [237cc120-6663-4752-8f5d-3eef3d1ce389] model deployment ID: []
+2025-10-08 10:37:09.867 [info] ccreq:14db44c2.copilotmd | success | claude-3.5-sonnet | 5954ms | [panel/editAgent]
+2025-10-08 10:37:23.140 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:23.140 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:23.146 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:23.147 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:23.180 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:23.180 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:23.202 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:23.202 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:23.225 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:23.225 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:23.242 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:23.242 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:29.504 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:37:29.505 [info] request done: requestId: [bc21d1bf-b9f3-4d3a-be54-427af9eb0ba8] model deployment ID: []
+2025-10-08 10:37:29.513 [info] ccreq:44122887.copilotmd | success | claude-3.5-sonnet | 6194ms | [panel/editAgent]
+2025-10-08 10:37:38.871 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:38.871 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:38.908 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:38.908 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:38.926 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:38.926 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:38.941 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:38.941 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:38.973 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:37:38.973 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:37:57.584 [info] message 0 returned. finish reason: [stop]
+2025-10-08 10:37:57.584 [info] request done: requestId: [bc21d1bf-b9f3-4d3a-be54-427af9eb0ba8] model deployment ID: []
+2025-10-08 10:37:57.587 [info] ccreq:d0b7cc4b.copilotmd | success | claude-3.5-sonnet | 18548ms | [panel/editAgent]
+2025-10-08 10:39:57.106 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:39:57.106 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:39:58.313 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:39:58.313 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:39:58.345 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:39:58.345 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:39:58.379 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:39:58.379 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:39:58.397 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:39:58.397 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:39:58.422 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:39:58.422 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:40:04.932 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:40:04.932 [info] request done: requestId: [ed62349e-dfdd-4a2f-8259-5a0ab96c5ccc] model deployment ID: []
+2025-10-08 10:40:04.935 [info] ccreq:0d0b8ed6.copilotmd | success | claude-3.5-sonnet | 6439ms | [panel/editAgent]
+2025-10-08 10:40:20.022 [info] message 0 returned. finish reason: [stop]
+2025-10-08 10:40:20.022 [info] request done: requestId: [9d8867d2-60a0-4b41-aa24-ddeec826432b] model deployment ID: []
+2025-10-08 10:40:20.024 [info] ccreq:cbfc5384.copilotmd | success | gpt-4o-mini | 576ms | [copilotLanguageModelWrapper]
+2025-10-08 10:40:20.893 [info] message 0 returned. finish reason: [stop]
+2025-10-08 10:40:20.893 [info] request done: requestId: [3d9935f9-7c2c-4757-b03d-19e2c6210491] model deployment ID: []
+2025-10-08 10:40:20.894 [info] ccreq:77e47a35.copilotmd | success | gpt-4o-mini | 813ms | [copilotLanguageModelWrapper]
+2025-10-08 10:41:29.996 [error] CodeSearchWorkspaceDiff: Failed to get new diff for file:///home/saif/Dev/work/goby.
+2025-10-08 10:41:30.284 [info] Fetched model metadata in 429ms bbeea378-8ce9-48cf-8761-180be3f3d597
+2025-10-08 10:41:30.286 [info] ccreq:c2543e86.copilotmd | markdown
+2025-10-08 10:41:31.047 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:31.057 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:31.080 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:31.080 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:31.088 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:31.088 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:31.096 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:31.096 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:31.103 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:31.103 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:36.541 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:36.541 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:36.557 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:36.557 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:36.581 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:36.581 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:36.606 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:36.606 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:36.649 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:36.649 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:36.678 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:41:36.678 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:41:50.779 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:41:50.779 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:41:50.783 [info] ccreq:e6ffaa7c.copilotmd | success | claude-3.5-sonnet | 14031ms | [panel/editAgent]
+2025-10-08 10:42:13.544 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:13.544 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:13.595 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:13.595 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:13.609 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:13.609 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:13.628 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:13.628 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:13.636 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:13.637 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:24.356 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:42:24.356 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:42:24.358 [info] ccreq:1e3c8647.copilotmd | success | claude-3.5-sonnet | 10662ms | [panel/editAgent]
+2025-10-08 10:42:24.404 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:24.404 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:24.735 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:24.735 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:24.784 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:24.784 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:24.802 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:24.802 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:24.823 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:24.823 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:33.262 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:42:33.262 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:42:33.263 [info] ccreq:a2efbabb.copilotmd | success | claude-3.5-sonnet | 8338ms | [panel/editAgent]
+2025-10-08 10:42:33.283 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:33.283 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:33.330 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:33.330 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:33.336 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:33.336 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:33.342 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:33.342 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:33.348 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:33.348 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:40.391 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:42:40.391 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:42:40.391 [info] ccreq:05ba5526.copilotmd | success | claude-3.5-sonnet | 7023ms | [panel/editAgent]
+2025-10-08 10:42:40.423 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:40.423 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:40.433 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:40.433 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:40.437 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:40.437 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:40.449 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:40.449 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:40.513 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:40.513 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:48.810 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:42:48.810 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:42:48.811 [info] ccreq:c50e424b.copilotmd | success | claude-3.5-sonnet | 8256ms | [panel/editAgent]
+2025-10-08 10:42:50.884 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:50.885 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:50.933 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:50.934 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:50.954 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:50.954 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:50.970 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:50.970 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:42:51.004 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:42:51.004 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:02.063 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:43:02.063 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:43:02.064 [info] ccreq:d29eb71f.copilotmd | success | claude-3.5-sonnet | 11019ms | [panel/editAgent]
+2025-10-08 10:43:04.128 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:04.128 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:04.192 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:04.193 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:04.220 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:04.220 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:04.236 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:04.236 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:04.248 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:04.248 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:12.667 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:43:12.667 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:43:12.669 [info] ccreq:c89f7ff6.copilotmd | success | claude-3.5-sonnet | 8384ms | [panel/editAgent]
+2025-10-08 10:43:14.746 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:14.746 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:14.811 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:14.811 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:14.846 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:14.846 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:14.862 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:14.862 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:14.875 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:14.875 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:29.908 [error] CodeSearchWorkspaceDiff: Failed to get new diff for file:///home/saif/Dev/work/goby.
+2025-10-08 10:43:45.113 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:43:45.113 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:43:45.114 [info] ccreq:3f1592b4.copilotmd | success | claude-3.5-sonnet | 30203ms | [panel/editAgent]
+2025-10-08 10:43:48.149 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:48.149 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:48.219 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:48.219 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:48.240 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:48.240 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:48.256 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:48.256 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:48.276 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:48.277 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:59.853 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:43:59.853 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:43:59.855 [info] ccreq:a7764104.copilotmd | success | claude-3.5-sonnet | 11532ms | [panel/editAgent]
+2025-10-08 10:43:59.879 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:59.879 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:59.914 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:59.914 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:59.930 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:59.930 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:59.938 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:59.938 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:43:59.945 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:43:59.945 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:11.885 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:44:11.885 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:44:11.888 [info] ccreq:faa3dc96.copilotmd | success | claude-3.5-sonnet | 11916ms | [panel/editAgent]
+2025-10-08 10:44:14.151 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:14.151 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:14.237 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:14.237 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:14.270 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:14.270 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:14.293 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:14.293 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:14.310 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:14.310 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:24.613 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:44:24.613 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:44:24.614 [info] ccreq:ad649a19.copilotmd | success | claude-3.5-sonnet | 10241ms | [panel/editAgent]
+2025-10-08 10:44:24.633 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:24.633 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:24.669 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:24.669 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:24.683 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:24.683 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:24.695 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:24.695 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:24.701 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:24.701 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:45.950 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:44:45.950 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:44:45.951 [info] ccreq:b630beae.copilotmd | success | claude-3.5-sonnet | 21232ms | [panel/editAgent]
+2025-10-08 10:44:48.125 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:48.125 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:48.284 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:48.284 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:48.299 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:48.299 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:48.315 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:48.315 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:44:48.327 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:44:48.327 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:00.320 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:45:00.320 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:45:00.321 [info] ccreq:cbc68ea6.copilotmd | success | claude-3.5-sonnet | 11952ms | [panel/editAgent]
+2025-10-08 10:45:00.340 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:00.341 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:00.365 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:00.366 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:00.378 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:00.378 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:00.387 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:00.388 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:00.409 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:00.409 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:17.453 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:45:17.453 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:45:17.454 [info] ccreq:53ff947e.copilotmd | success | claude-3.5-sonnet | 16979ms | [panel/editAgent]
+2025-10-08 10:45:19.586 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:19.586 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:19.643 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:19.643 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:19.659 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:19.660 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:19.676 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:19.676 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:19.690 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:19.690 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:29.899 [error] CodeSearchWorkspaceDiff: Failed to get new diff for file:///home/saif/Dev/work/goby.
+2025-10-08 10:45:45.211 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:45:45.211 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:45:45.212 [info] ccreq:1a4c8ea4.copilotmd | success | claude-3.5-sonnet | 25466ms | [panel/editAgent]
+2025-10-08 10:45:47.795 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:47.795 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:47.879 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:47.879 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:47.897 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:47.897 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:47.915 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:47.915 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:47.946 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:47.946 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:59.698 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:45:59.698 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:45:59.699 [info] ccreq:df29e476.copilotmd | success | claude-3.5-sonnet | 11671ms | [panel/editAgent]
+2025-10-08 10:45:59.719 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:59.719 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:59.750 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:59.750 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:59.756 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:59.756 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:59.768 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:59.768 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:45:59.775 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:45:59.775 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:19.591 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:46:19.591 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:46:19.593 [info] ccreq:1004e5c4.copilotmd | success | claude-3.5-sonnet | 19785ms | [panel/editAgent]
+2025-10-08 10:46:21.686 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:21.687 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:21.765 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:21.765 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:21.791 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:21.791 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:21.816 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:21.816 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:21.826 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:21.826 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:33.029 [info] message 0 returned. finish reason: [tool_calls]
+2025-10-08 10:46:33.029 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:46:33.031 [info] ccreq:f03d4559.copilotmd | success | claude-3.5-sonnet | 11130ms | [panel/editAgent]
+2025-10-08 10:46:33.106 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:33.106 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:33.145 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:33.145 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:33.158 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:33.158 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:33.164 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:33.164 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:33.176 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-08 10:46:33.177 [warning] GitHub.vscode-pull-request-github extension API is not available.
+2025-10-08 10:46:44.506 [info] message 0 returned. finish reason: [stop]
+2025-10-08 10:46:44.506 [info] request done: requestId: [42fe1aff-edad-4168-aa03-c71a0401d193] model deployment ID: []
+2025-10-08 10:46:44.507 [info] ccreq:0ce06a04.copilotmd | success | claude-3.5-sonnet | 11309ms | [panel/editAgent]
+2025-10-08 10:47:29.919 [error] CodeSearchWorkspaceDiff: Failed to get new diff for file:///home/saif/Dev/work/goby.

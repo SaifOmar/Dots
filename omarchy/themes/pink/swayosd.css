@@ -1,0 +1,11 @@
+/* ────────────────────────────────────────────────────────────
+ * Omarchy Custom Theme for SwayOSD
+ * Generated with Omarchist (Palette: Warm Rose)
+ * ────────────────────────────────────────────────────────────
+ */
+
+@define-color background-color #450920;   /* chocolate-cosmos */
+@define-color border-color     #da627d;   /* blush */
+@define-color label            #f9dbbd;   /* light-orange */
+@define-color image            #ffa5ab;   /* salmon-pink */
+@define-color progress         #a53860;   /* raspberry-rose */

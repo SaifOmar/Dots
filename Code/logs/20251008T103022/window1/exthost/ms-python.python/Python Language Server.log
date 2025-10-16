@@ -1,0 +1,68 @@
+2025-10-08 10:30:58.708 [info] (Client) Pylance client (2025.8.3) started with python extension (2025.14.0)
+2025-10-08 10:31:03.060 [info] (473387) Server root directory: file:///home/saif/.vscode/extensions/ms-python.vscode-pylance-2025.8.3/dist
+2025-10-08 10:31:03.072 [info] (473387) Pylance language server 2025.8.3 (pyright version 1.1.405, commit d64f3fa0) starting
+2025-10-08 10:31:03.083 [info] (473387) Starting service instance "goby" for workspace "/home/saif/Dev/work/goby"
+2025-10-08 10:31:03.314 [info] (473387) Loading configuration file at /home/saif/Dev/work/goby/pyrightconfig.json
+2025-10-08 10:31:03.317 [info] (473387) Setting pythonPath for service "goby": "/home/saif/Dev/work/goby/venv/bin/python"
+2025-10-08 10:31:03.318 [info] (473387) No include entries specified; assuming /home/saif/Dev/work/goby
+2025-10-08 10:31:03.319 [info] (473387) Auto-excluding **/node_modules
+2025-10-08 10:31:03.320 [info] (473387) Auto-excluding **/__pycache__
+2025-10-08 10:31:03.320 [info] (473387) Auto-excluding **/.*
+2025-10-08 10:31:03.445 [info] (473387) Assuming Python version 3.12.3.final.0
+2025-10-08 10:31:03.889 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:31:03.890 [info] (473387) Found 207 source files
+2025-10-08 10:31:03.912 [info] (473387) Settings have not changed. Skipping update.
+2025-10-08 10:31:04.657 [info] (473387) Starting Mcp server id:3921 ...
+2025-10-08 10:31:05.824 [info] (473387) BG: Priority queue background worker(2) root directory: file:///home/saif/.vscode/extensions/ms-python.vscode-pylance-2025.8.3/dist
+2025-10-08 10:31:05.829 [info] (473387) BG: Priority queue background worker(2) started
+2025-10-08 10:31:06.459 [info] (473387) BG: Indexer background runner(3) root directory: file:///home/saif/.vscode/extensions/ms-python.vscode-pylance-2025.8.3/dist (index)
+2025-10-08 10:31:06.460 [info] (473387) BG: Indexing(3) started
+2025-10-08 10:31:08.224 [info] (473387) BG: scanned(3) 779 files over 1 exec env
+2025-10-08 10:31:09.197 [info] (473387) BG: [BG(1)] Long operation: SemanticTokens range 0:0 - 73:36 at file:///home/saif/Dev/work/goby/delivery/views.py (2983ms)
+2025-10-08 10:31:12.247 [info] (473387) BG: [BG(1)] Long operation: SemanticTokens full at file:///home/saif/Dev/work/goby/delivery/views.py (3024ms)
+2025-10-08 10:31:13.198 [info] (473387) BG: [IDX(3)] Long operation: index execution environment file:///home/saif/Dev/work/goby (4465ms)
+2025-10-08 10:31:13.199 [info] (473387) BG: [IDX(3)] Long operation: index packages file:///home/saif/Dev/work/goby (4550ms)
+2025-10-08 10:31:13.199 [info] (473387) BG: indexed(3) 779 files over 1 exec env
+2025-10-08 10:31:13.489 [info] (473387) BG: Indexing finished(3).
+2025-10-08 10:37:48.647 [info] (473387) virtual workspace: vscode-chat-code-block://586bdb76-a8b7-4164-a7f0-6db093d0553d/
+2025-10-08 10:37:48.648 [info] (473387) Starting service instance "<default>" for workspace "vscode-chat-code-block://586bdb76-a8b7-4164-a7f0-6db093d0553d/"
+2025-10-08 10:37:48.844 [info] (473387) Setting environmentName for service "<default>": "3.12.3 (venv venv)"
+2025-10-08 10:37:48.845 [info] (473387) No include entries specified; assuming vscode-chat-code-block://586bdb76-a8b7-4164-a7f0-6db093d0553d/
+2025-10-08 10:37:48.846 [info] (473387) Auto-excluding **/node_modules
+2025-10-08 10:37:48.847 [info] (473387) Auto-excluding **/__pycache__
+2025-10-08 10:37:48.847 [info] (473387) Auto-excluding **/.*
+2025-10-08 10:37:49.007 [info] (473387) Assuming Python version 3.13.7.final.0
+2025-10-08 10:37:50.410 [error] (473387) File or directory "vscode-chat-code-block://586bdb76-a8b7-4164-a7f0-6db093d0553d/" does not exist.
+2025-10-08 10:37:50.411 [info] (473387) No source files found.
+2025-10-08 10:42:49.688 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:42:49.689 [info] (473387) Found 208 source files
+2025-10-08 10:42:52.914 [info] (473387) BG: [BG(1)] Long operation: checking: file:///home/saif/Dev/work/goby/delivery/views.py (2826ms)
+2025-10-08 10:42:52.914 [info] (473387) BG: [BG(1)] Long operation: analyzing: file:///home/saif/Dev/work/goby/delivery/views.py (2826ms)
+2025-10-08 10:43:02.897 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:43:02.897 [info] (473387) Found 209 source files
+2025-10-08 10:43:05.162 [info] (473387) BG: [BG(1)] Long operation: checking: file:///home/saif/Dev/work/goby/delivery/views.py (2241ms)
+2025-10-08 10:43:05.162 [info] (473387) BG: [BG(1)] Long operation: analyzing: file:///home/saif/Dev/work/goby/delivery/views.py (2242ms)
+2025-10-08 10:43:13.444 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:43:13.445 [info] (473387) Found 210 source files
+2025-10-08 10:43:16.595 [info] (473387) BG: [BG(1)] Long operation: checking: file:///home/saif/Dev/work/goby/delivery/views.py (2885ms)
+2025-10-08 10:43:16.595 [info] (473387) BG: [BG(1)] Long operation: analyzing: file:///home/saif/Dev/work/goby/delivery/views.py (2885ms)
+2025-10-08 10:43:47.246 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:43:47.248 [info] (473387) Found 211 source files
+2025-10-08 10:44:12.873 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:44:12.874 [info] (473387) Found 212 source files
+2025-10-08 10:44:15.730 [info] (473387) BG: [BG(1)] Long operation: checking: file:///home/saif/Dev/work/goby/delivery/views.py (2078ms)
+2025-10-08 10:44:15.731 [info] (473387) BG: [BG(1)] Long operation: analyzing: file:///home/saif/Dev/work/goby/delivery/views.py (2154ms)
+2025-10-08 10:44:46.811 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:44:46.811 [info] (473387) Found 213 source files
+2025-10-08 10:44:49.344 [info] (473387) BG: [BG(1)] Long operation: checking: file:///home/saif/Dev/work/goby/delivery/views.py (2233ms)
+2025-10-08 10:44:49.345 [info] (473387) BG: [BG(1)] Long operation: analyzing: file:///home/saif/Dev/work/goby/delivery/views.py (2414ms)
+2025-10-08 10:45:18.426 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:45:18.428 [info] (473387) Found 214 source files
+2025-10-08 10:45:46.176 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:45:46.176 [info] (473387) Found 215 source files
+2025-10-08 10:46:20.522 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:46:20.522 [info] (473387) Found 216 source files
+2025-10-08 10:48:43.419 [info] (473387) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-08 10:48:43.420 [info] (473387) Found 207 source files
+2025-10-08 10:48:46.267 [info] (473387) BG: [BG(1)] Long operation: checking: file:///home/saif/Dev/work/goby/delivery/views.py (2724ms)
+2025-10-08 10:48:46.267 [info] (473387) BG: [BG(1)] Long operation: analyzing: file:///home/saif/Dev/work/goby/delivery/views.py (2724ms)

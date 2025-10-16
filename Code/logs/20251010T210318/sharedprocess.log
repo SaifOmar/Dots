@@ -1,0 +1,8 @@
+2025-10-10 21:03:25.291 [error] [uncaught exception in sharedProcess]: Channel name 'extensionRecommendationNotification' timed out after 1000ms
+2025-10-10 21:03:28.794 [info] Getting Manifest... ms-python.vscode-python-envs
+2025-10-10 21:03:29.202 [info] Installing extension: ms-python.vscode-python-envs {"productVersion":{"version":"1.104.2","date":"2025-09-24T11:21:37.073Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/saif/.vscode/extensions/extensions.json","path":"/home/saif/.vscode/extensions/extensions.json","scheme":"vscode-userdata"}}
+2025-10-10 21:03:33.632 [info] Extension signature verification result for ms-python.vscode-python-envs: Success. Internal Code: 0. Executed: true. Duration: 1920ms.
+2025-10-10 21:03:34.092 [info] Extracted extension to file:///home/saif/.vscode/extensions/ms-python.vscode-python-envs-1.10.0-linux-x64: ms-python.vscode-python-envs
+2025-10-10 21:03:34.105 [info] Renamed to /home/saif/.vscode/extensions/ms-python.vscode-python-envs-1.10.0-linux-x64
+2025-10-10 21:03:34.139 [info] Marked extension as removed ms-python.vscode-python-envs-1.8.0-linux-x64
+2025-10-10 21:03:34.160 [info] Extension installed successfully: ms-python.vscode-python-envs vscode-userdata:/home/saif/.vscode/extensions/extensions.json

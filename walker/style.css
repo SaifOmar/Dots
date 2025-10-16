@@ -1,0 +1,108 @@
+/* --- Custom Walker Theme --- */
+
+/* Import your auto-generated colors so we can use them */
+@import url("file:///home/saif/.cache/wal/colors-walker.css");
+
+/* Define a new 'surface' color for backgrounds. This avoids the 'lighter()' error. */
+@define-color surface alpha(@foreground, 0.08);
+
+/* --- Global Reset --- */
+#window, #box, #aiScroll, #aiList, #search, #password, #input, #prompt,
+#clear, #typeahead, #list, child, scrollbar, slider, #item, #text,
+#label, #bar, #sub, #activationlabel {
+    all: unset;
+    font-family: "Inter", Adwaita Mono, sans-serif;
+    font-size: 14px;
+}
+
+/* --- Main Window --- */
+#window {
+    color: @foreground;
+    /* This creates a dim overlay behind the launcher for focus */
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+#box {
+    background-color: @background;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid alpha(@foreground, 0.1);
+    /* A softer, more modern shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Search Input Area --- */
+#search {
+    background-color: @surface;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+#prompt {
+    margin-left: 4px;
+    margin-right: 12px;
+    color: @foreground;
+    opacity: 0.4;
+    font-size: 1.6em;
+}
+
+#input {
+    color: @foreground;
+    font-size: 1.6em;
+}
+
+#input placeholder {
+    opacity: 0.5;
+}
+
+/* --- Results List --- */
+#list {
+    margin: 4px;
+}
+
+child {
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    /* Add a smooth transition for hover effects */
+    transition: background-color 0.2s ease-out;
+}
+
+child:selected,
+child:hover {
+    background-color: alpha(@color1, 0.5);
+}
+
+#icon {
+    margin-right: 12px;
+    font-size: 1.8em;
+    min-width: 32px; /* Ensures text aligns neatly */
+}
+
+#text {
+    font-size: 1.1em;
+}
+
+#sub {
+    opacity: 0.6;
+    font-size: 0.9em;
+}
+
+/* --- AI Chat Styling --- */
+.aiItem {
+    padding: 12px;
+    border-radius: 8px;
+    margin: 8px 4px;
+    color: @foreground;
+}
+
+/* Assistant's chat bubble */
+.aiItem.assistant {
+    background-color: @surface;
+}
+
+/* User's chat bubble (subtly different) */
+.aiItem.user {
+    background-color: alpha(@foreground, 0.04);
+}

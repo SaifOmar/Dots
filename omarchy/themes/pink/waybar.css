@@ -1,0 +1,9 @@
+/* ────────────────────────────────────────────────────────────
+ * Omarchy Custom Theme for Waybar
+ * Generated with Omarchist
+ * ────────────────────────────────────────────────────────────
+ */
+
+/* #200000 */
+@define-color background #450920;  /* chocolate-cosmos → deep, perfect for background */
+@define-color foreground #f9dbbd;  /* light-orange → soft, readable text */

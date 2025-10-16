@@ -1,0 +1,181 @@
+/* Import theme variables */
+@import "../omarchy/current/theme/waybar.css";
+
+/* --- Global Reset & Font --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 13px;
+    min-height: 0;
+    
+    /* Smooth transitions for a polished feel */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- The Bar Itself --- */
+window#waybar {
+    background-color: transparent;
+    color: @foreground;
+    margin: 6px 8px; /* Margin to keep the modules from the screen edge */
+}
+
+/* --- Workspaces --- */
+#workspaces {
+    background-color: alpha(@foreground, 0.08);
+    margin: 4px;
+    padding: 0 4px;
+    border-radius: 20px; /* Fully rounded pill shape */
+}
+
+#workspaces button {
+    padding: 1px 8px;
+    margin: 4px 2px;
+    background-color: transparent;
+    color: @foreground;
+    border-radius: 20px;
+}
+
+#workspaces button:hover {
+    background: alpha(@foreground, 0.15);
+    color: @foreground;
+}
+
+#workspaces button.empty {
+    opacity: 0.4; /* More subtle for an empty workspace */
+}
+
+#workspaces button.focused {
+    opacity: 1;
+    background-color: @color4;
+    color: @background;
+    padding: 2px 12px;
+}
+
+#workspaces button.urgent {
+    background-color: @color1;
+    color: @background;
+}
+
+
+/* --- General Module Styling (Pill-shaped Modules) --- */
+#clock,
+#backlight,
+#cpu,
+#memory,
+#network,
+#tray,
+#mpris,
+#custom-power,
+#power-profiles-daemon,
+#bluetooth,
+#battery,
+#window,
+#custom-launcher,
+#custom-hyprsunset,
+#custom-omarchy,
+#pulseaudio {
+    /* Each module is its own pill */
+    background-color: alpha(@foreground, 0.08);
+    border-radius: 20px;
+    padding: 0 12px;
+    margin: 4px 4px; /* More space between modules */
+    color: @foreground;
+}
+
+/* --- Module Groups (No Groups, each is a pill) --- */
+/* The previous config had module groups, but this one treats each as a separate element.
+   The pill styling above handles the visual separation. */
+
+/* --- Individual Modules --- */
+#clock {
+    padding: 0 12px;
+}
+
+#tray {
+    background-color: alpha(@color3, 0.15);
+    padding: 0 10px;
+}
+
+#custom-power {
+    color: @foreground;
+    background-color: @color1;
+}
+
+#custom-power:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    box-shadow: 0 0 10px 0 @color1; /* A "glow" effect on hover */
+}
+
+#custom-launcher {
+    color: @color4;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 0 8px; /* Smaller padding for a cleaner icon */
+    margin-left: 8px;
+    border-radius: 50%; /* A circular launcher button */
+}
+
+#custom-launcher:hover {
+    background-color: alpha(@foreground, 0.15);
+    box-shadow: 0 0 10px 0 @color4;
+}
+
+#custom-omarchy {
+    background-color: transparent;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* --- Hover Effects --- */
+/* A generic hover for modules with a subtle glow */
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#backlight:hover,
+#power-profiles-daemon:hover,
+#custom-hyprsunset:hover,
+#bluetooth:hover,
+#battery:hover,
+#clock:hover,
+#tray:hover {
+    background-color: alpha(@foreground, 0.15);
+    box-shadow: 0 0 10px 0 alpha(@foreground, 0.5);
+}
+
+/* --- Specific Module Tweaks --- */
+#mpris {
+    background-color: transparent; /* A floating module for now playing */
+    padding: 0 10px;
+    font-style: italic;
+    color: @color5; /* Use a distinct color for the mpris text */
+}
+
+#battery.charging {
+    color: @color3;
+}
+#battery.warning {
+    color: @color1;
+}
+
+/* --- Nicer Slider Styling --- */
+#backlight slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#backlight trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background-color: alpha(@foreground, 0.1);
+}
+#backlight highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: @color4;
+}

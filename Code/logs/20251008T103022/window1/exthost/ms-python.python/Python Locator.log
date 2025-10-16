@@ -1,0 +1,42 @@
+2025-10-08 10:30:37.349 [info] Starting Python Locator /home/saif/.vscode/extensions/ms-python.python-2025.14.0-linux-x64/python-env-tools/bin/pet server
+2025-10-08 10:30:56.637 [info] Discovered manager: (Pyenv) /usr/bin/pyenv
+2025-10-08 10:30:56.639 [info] Discovered env: /home/saif/.pyenv/versions/3.12.3/bin/python
+2025-10-08 10:30:56.646 [info] Discovered env: /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:30:56.655 [info] Discovered env: /bin/python
+2025-10-08 10:30:56.658 [info] Discovered env: /usr/bin/python
+2025-10-08 10:30:56.673 [info] Env ("/sbin/python") in Path resolved as ResolvedPythonEnv { executable: "/sbin/python", prefix: "/usr", version: "3.13.7.final.0", is64_bit: true, symlinks: Some(["/sbin/python"]) } and reported as Some(GlobalPaths)
+2025-10-08 10:30:56.673 [info] Discovered env: /sbin/python
+2025-10-08 10:30:56.675 [info] Env ("/usr/sbin/python") in Path resolved as ResolvedPythonEnv { executable: "/usr/sbin/python", prefix: "/usr", version: "3.13.7.final.0", is64_bit: true, symlinks: Some(["/usr/sbin/python"]) } and reported as Some(GlobalPaths)
+2025-10-08 10:30:56.675 [info] Discovered env: /usr/sbin/python
+2025-10-08 10:30:56.676 [info] Env ("/sbin/python3") in Path resolved as ResolvedPythonEnv { executable: "/sbin/python3", prefix: "/usr", version: "3.13.7.final.0", is64_bit: true, symlinks: Some(["/sbin/python3"]) } and reported as Some(GlobalPaths)
+2025-10-08 10:30:56.676 [info] Discovered env: /sbin/python3
+2025-10-08 10:30:56.677 [info] Env ("/usr/sbin/python3") in Path resolved as ResolvedPythonEnv { executable: "/usr/sbin/python3", prefix: "/usr", version: "3.13.7.final.0", is64_bit: true, symlinks: Some(["/usr/sbin/python3"]) } and reported as Some(GlobalPaths)
+2025-10-08 10:30:56.677 [info] Discovered env: /usr/sbin/python3
+2025-10-08 10:30:56.912 [info] Env ("/sbin/python3.13") in Path resolved as ResolvedPythonEnv { executable: "/sbin/python3.13", prefix: "/usr", version: "3.13.7.final.0", is64_bit: true, symlinks: Some(["/sbin/python3.13"]) } and reported as Some(GlobalPaths)
+2025-10-08 10:30:56.915 [info] Discovered env: /sbin/python3.13
+2025-10-08 10:30:56.920 [info] Env ("/usr/sbin/python3.13") in Path resolved as ResolvedPythonEnv { executable: "/usr/sbin/python3.13", prefix: "/usr", version: "3.13.7.final.0", is64_bit: true, symlinks: Some(["/usr/sbin/python3.13"]) } and reported as Some(GlobalPaths)
+2025-10-08 10:30:56.937 [info] Discovered env: /usr/sbin/python3.13
+2025-10-08 10:30:56.940 [info] Locator Conda took 1.075011387s
+2025-10-08 10:30:56.941 [info] Locator Homebrew took 266.261µs
+2025-10-08 10:30:56.941 [info] Locator LinuxGlobal took 962.257323ms
+2025-10-08 10:30:56.942 [info] Locator PipEnv took 56.295µs
+2025-10-08 10:30:56.942 [info] Locator Pixi took 81.753µs
+2025-10-08 10:30:56.942 [info] Locator Poetry took 2.483941ms
+2025-10-08 10:30:56.942 [info] Locator PyEnv took 178.441944ms
+2025-10-08 10:30:56.942 [info] Locator Venv took 39.684µs
+2025-10-08 10:30:56.942 [info] Locator VirtualEnv took 211.784µs
+2025-10-08 10:30:56.942 [info] Locator VirtualEnvWrapper took 59.731µs
+2025-10-08 10:30:56.942 [info] Locator GlobalVirtualEnvs took 4.059578ms
+2025-10-08 10:30:56.942 [info] Locator Locators took 1.079804699s
+2025-10-08 10:30:56.942 [info] Locator Path took 1.602761717s
+2025-10-08 10:30:56.943 [info] Locator Workspaces took 200.105191ms
+2025-10-08 10:30:56.943 [info] Refresh completed in 1608ms
+2025-10-08 10:30:56.948 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:37:48.713 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:38:44.046 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:43:16.911 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:43:53.690 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:44:41.494 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:45:21.327 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:46:09.355 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python
+2025-10-08 10:48:42.397 [info] Resolved Python Environment /home/saif/Dev/work/goby/venv/bin/python

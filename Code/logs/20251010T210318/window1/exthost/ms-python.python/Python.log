@@ -1,0 +1,9 @@
+2025-10-10 21:03:27.581 [info] Experiment 'pythonSurveyNotificationcf' is active
+2025-10-10 21:03:27.581 [info] Native locator: Refresh started
+2025-10-10 21:03:27.939 [info] Native locator: Refresh started
+2025-10-10 21:03:34.376 [info] Pyenv environment manager found at: /usr/bin/pyenv
+2025-10-10 21:03:34.404 [info] > pyenv which python
+2025-10-10 21:03:34.404 [info] cwd: .
+2025-10-10 21:03:36.618 [info] Native locator: Refresh finished in 9808 ms
+2025-10-10 21:03:36.621 [info] Python interpreter path: ./venv/bin/python
+2025-10-10 21:03:39.877 [info] Starting Pylance language server.

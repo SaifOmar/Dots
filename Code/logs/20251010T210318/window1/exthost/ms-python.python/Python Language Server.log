@@ -1,0 +1,25 @@
+2025-10-10 21:03:37.549 [info] (Client) Pylance client (2025.8.3) started with python extension (2025.16.0)
+2025-10-10 21:03:39.828 [info] (230064) Server root directory: file:///home/saif/.vscode/extensions/ms-python.vscode-pylance-2025.8.3/dist
+2025-10-10 21:03:39.830 [info] (230064) Pylance language server 2025.8.3 (pyright version 1.1.405, commit d64f3fa0) starting
+2025-10-10 21:03:39.843 [info] (230064) Starting service instance "goby" for workspace "/home/saif/Dev/work/goby"
+2025-10-10 21:03:40.220 [info] (230064) Loading configuration file at /home/saif/Dev/work/goby/pyrightconfig.json
+2025-10-10 21:03:40.223 [info] (230064) Setting pythonPath for service "goby": "/home/saif/Dev/work/goby/venv/bin/python"
+2025-10-10 21:03:40.224 [info] (230064) No include entries specified; assuming /home/saif/Dev/work/goby
+2025-10-10 21:03:40.225 [info] (230064) Auto-excluding **/node_modules
+2025-10-10 21:03:40.225 [info] (230064) Auto-excluding **/__pycache__
+2025-10-10 21:03:40.226 [info] (230064) Auto-excluding **/.*
+2025-10-10 21:03:40.936 [info] (230064) Assuming Python version 3.12.3.final.0
+2025-10-10 21:03:41.259 [info] (230064) Auto-excluding /home/saif/Dev/work/goby/venv
+2025-10-10 21:03:41.260 [info] (230064) Found 210 source files
+2025-10-10 21:03:41.273 [info] (230064) Settings have not changed. Skipping update.
+2025-10-10 21:03:41.827 [info] (230064) Starting Mcp server id:3747 ...
+2025-10-10 21:03:41.931 [info] (230064) BG: Priority queue background worker(2) root directory: file:///home/saif/.vscode/extensions/ms-python.vscode-pylance-2025.8.3/dist
+2025-10-10 21:03:41.932 [info] (230064) BG: Priority queue background worker(2) started
+2025-10-10 21:03:43.315 [info] (230064) BG: Indexer background runner(3) root directory: file:///home/saif/.vscode/extensions/ms-python.vscode-pylance-2025.8.3/dist (index)
+2025-10-10 21:03:43.315 [info] (230064) BG: Indexing(3) started
+2025-10-10 21:03:44.601 [info] (230064) BG: [BG(1)] Long operation: SemanticTokens range 0:0 - 73:36 at file:///home/saif/Dev/work/goby/delivery/views.py (2415ms)
+2025-10-10 21:03:44.781 [info] (230064) BG: scanned(3) 779 files over 1 exec env
+2025-10-10 21:03:48.205 [info] (230064) BG: [IDX(3)] Long operation: index execution environment file:///home/saif/Dev/work/goby (2997ms)
+2025-10-10 21:03:48.206 [info] (230064) BG: [IDX(3)] Long operation: index packages file:///home/saif/Dev/work/goby (3043ms)
+2025-10-10 21:03:48.206 [info] (230064) BG: indexed(3) 779 files over 1 exec env
+2025-10-10 21:03:48.494 [info] (230064) BG: Indexing finished(3).

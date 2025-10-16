@@ -1,0 +1,46 @@
+2025-10-10 15:15:29.513 [info] [main] Log level: Info
+2025-10-10 15:15:29.513 [info] [main] Validating found git in: "git"
+2025-10-10 15:15:29.513 [info] [main] Using git "2.51.0" from "git"
+2025-10-10 15:15:29.513 [info] [Model][doInitialScan] Initial repository scan started
+2025-10-10 15:15:29.513 [info] > git rev-parse --show-toplevel [87ms]
+2025-10-10 15:15:29.513 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [4343ms]
+2025-10-10 15:15:29.513 [info] [Model][openRepository] Opened repository (path): /home/saif/Dev/work/goby
+2025-10-10 15:15:29.513 [info] [Model][openRepository] Opened repository (real path): /home/saif/Dev/work/goby
+2025-10-10 15:15:29.513 [info] [Model][openRepository] Opened repository (kind): repository
+2025-10-10 15:15:29.571 [info] > git rev-parse --show-toplevel [309ms]
+2025-10-10 15:15:29.572 [info] > git config --get commit.template [318ms]
+2025-10-10 15:15:29.945 [info] > git check-ignore -v -z --stdin [48ms]
+2025-10-10 15:15:29.947 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/saif-refactor refs/remotes/saif-refactor [338ms]
+2025-10-10 15:15:30.478 [info] > git status -z -uall [522ms]
+2025-10-10 15:15:30.479 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [513ms]
+2025-10-10 15:15:30.540 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/saif-refactor refs/remotes/saif-refactor [23ms]
+2025-10-10 15:15:30.569 [info] > git config --get --local branch.saif-refactor.vscode-merge-base [18ms]
+2025-10-10 15:15:30.580 [info] > git config --get commit.template [44ms]
+2025-10-10 15:15:30.590 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/saif refs/remotes/origin/saif [11ms]
+2025-10-10 15:15:30.607 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/saif-refactor refs/remotes/saif-refactor [6ms]
+2025-10-10 15:15:30.635 [info] > git status -z -uall [19ms]
+2025-10-10 15:15:30.637 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-10 15:15:30.637 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [13ms]
+2025-10-10 15:15:30.662 [info] > git rev-parse --show-toplevel [11ms]
+2025-10-10 15:15:30.877 [info] > git rev-parse --show-toplevel [205ms]
+2025-10-10 15:15:30.893 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-10 15:15:30.902 [info] > git rev-parse --show-toplevel [2ms]
+2025-10-10 15:15:30.911 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-10 15:15:30.921 [info] > git rev-parse --show-toplevel [2ms]
+2025-10-10 15:15:30.930 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-10 15:15:30.959 [info] > git rev-parse --show-toplevel [10ms]
+2025-10-10 15:15:30.976 [info] > git rev-parse --show-toplevel [7ms]
+2025-10-10 15:15:31.012 [info] > git rev-parse --show-toplevel [27ms]
+2025-10-10 15:15:31.039 [info] > git rev-parse --show-toplevel [19ms]
+2025-10-10 15:15:31.049 [info] > git rev-parse --show-toplevel [2ms]
+2025-10-10 15:15:31.075 [info] > git rev-parse --show-toplevel [18ms]
+2025-10-10 15:15:31.085 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-10 15:15:31.087 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-10-10 15:15:31.117 [info] > git show --textconv :delivery/views.py [21ms]
+2025-10-10 15:15:31.118 [info] > git ls-files --stage -- delivery/views.py [14ms]
+2025-10-10 15:15:31.128 [info] > git cat-file -s 220769eb001446128adff82e858734427a2838a9 [3ms]
+2025-10-10 15:15:31.128 [info] > git config --get commit.template [13ms]
+2025-10-10 15:15:31.141 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/saif-refactor refs/remotes/saif-refactor [2ms]
+2025-10-10 15:15:31.160 [info] > git status -z -uall [11ms]
+2025-10-10 15:15:31.161 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2025-10-10 15:15:31.647 [info] > git diff --name-status -z --diff-filter=ADMR a3d6f560937a47488c4fd2b8966d70f6a06aec4d [11ms]

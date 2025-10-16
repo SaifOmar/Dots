@@ -1,0 +1,101 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "bc483b4848c0c1987fa620139c575713117bd1ddb3f1c633231d202a0510f4fa",
+    "telemetry.devDeviceId": "9b350d88-8d06-4cb3-bd52-ba08829bdc69",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/saif/Dev/work/goby"
+            },
+            {
+                "folderUri": "vscode-remote://ssh-remote%2B160.153.174.255/home/goby/from_git/v1/goby",
+                "remoteAuthority": "ssh-remote+160.153.174.255"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/saif/Dev/personal-projects/localpulse": "__default__profile__",
+            "file:///home/saif/Dev/personal-projects/git_geniuses": "__default__profile__",
+            "file:///home/saif/Dev/work/goby": "__default__profile__",
+            "vscode-remote://ssh-remote%2B160.153.174.255/home/goby/from_git/v1/goby": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1f1f1f",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#cccccc",
+            "background": "#1f1f1f",
+            "editorBackground": "#1f1f1f",
+            "titleBarBackground": "#181818",
+            "titleBarBorder": "#2b2b2b",
+            "activityBarBackground": "#181818",
+            "activityBarBorder": "#2b2b2b",
+            "sideBarBackground": "#181818",
+            "sideBarBorder": "#2b2b2b",
+            "statusBarBackground": "#181818",
+            "statusBarBorder": "#2b2b2b",
+            "statusBarNoFolderBackground": "#1f1f1f"
+        },
+        "layoutInfo": {
+            "sideBarSide": "right",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 208,
+            "auxiliaryBarWidth": 258,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "vscode-remote://ssh-remote%2B160.153.174.255/home/goby/from_git/v1/goby",
+            "backupPath": "/home/saif/.config/Code/Backups/7f58dacdd2af81f2cf614b50b880f457",
+            "remoteAuthority": "ssh-remote+160.153.174.255",
+            "uiState": {
+                "mode": 0,
+                "x": 0,
+                "y": 0,
+                "width": 1680,
+                "height": 1050
+            }
+        },
+        "openedWindows": []
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 208,
+            "auxiliaryBarWidth": 258,
+            "workspaces": {
+                "a221cf8a791f75ab17d0382565d8b988": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "1263e8da508d7c7564a20242ae4feb5e": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "342253b1fd3429e62a8a20b670b8fff1": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "7c6296803fd3697c823ccc8cfdd62a22": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "5f994b5d8675dea1d897701f351f2915": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                }
+            }
+        }
+    }
+}

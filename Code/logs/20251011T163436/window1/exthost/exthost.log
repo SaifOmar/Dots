@@ -1,0 +1,171 @@
+2025-10-11 16:34:44.617 [info] Extension host with pid 137713 started
+2025-10-11 16:34:44.617 [info] Skipping acquiring lock for /home/saif/.config/Code/User/workspaceStorage/5f994b5d8675dea1d897701f351f2915.
+2025-10-11 16:34:45.837 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-10-11 16:34:46.051 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-11 16:34:46.226 [info] ExtensionService#_doActivateExtension Vue.volar, startup: false, activationEvent: 'onLanguage'
+2025-10-11 16:34:46.523 [info] ExtensionService#_doActivateExtension GitHub.copilot-chat, startup: false, activationEvent: 'onChatParticipant:github.copilot.editsAgent'
+2025-10-11 16:34:49.112 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python', root cause: ms-python.debugpy
+2025-10-11 16:34:49.985 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'onLanguage:python'
+2025-10-11 16:34:51.889 [info] ExtensionService#_doActivateExtension ms-python.vscode-python-envs, startup: false, activationEvent: 'onLanguage:python'
+2025-10-11 16:34:53.083 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-10-11 16:34:53.302 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2025-10-11 16:34:53.698 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-10-11 16:34:53.935 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-10-11 16:34:55.105 [info] Eager extensions activated
+2025-10-11 16:34:55.152 [info] ExtensionService#_doActivateExtension ms-python.debugpy, startup: false, activationEvent: 'onLanguage:python'
+2025-10-11 16:34:55.659 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:34:55.682 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:34:55.875 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:34:55.998 [info] ExtensionService#_doActivateExtension GitHub.copilot, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:35:05.555 [info] ExtensionService#_doActivateExtension monokai.theme-monokai-pro-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:35:05.588 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:35:05.856 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:35:07.200 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-11 16:35:07.356 [error] TypeError: Cannot read properties of undefined (reading 'subscriptions')
+    at Object.X [as deactivate] (/home/saif/.vscode/extensions/ms-python.vscode-python-envs-1.10.0-linux-x64/dist/extension.js:2:668401)
+    at aJ.eb (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11836)
+    at file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9986
+    at Array.map (<anonymous>)
+    at aJ.$ (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9974)
+    at aJ.terminate (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10217)
+    at RP.terminate (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:914)
+    at bs (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:10410)
+    at MessagePortMain.<anonymous> (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:6949)
+    at MessagePortMain.emit (node:events:518:28)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2025-10-11 16:35:07.398 [info] Extension host with pid 137713 exiting with code 0
+2025-10-11 16:35:08.009 [info] Extension host with pid 138290 started
+2025-10-11 16:35:08.009 [info] Skipping acquiring lock for /home/saif/.config/Code/User/workspaceStorage/7c6296803fd3697c823ccc8cfdd62a22.
+2025-10-11 16:35:08.009 [info] $getCanonicalURI invoked for authority (ssh-remote)
+2025-10-11 16:35:08.050 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+2025-10-11 16:35:08.465 [error] PendingMigrationError: navigator is now a global in nodejs, please see https://aka.ms/vscode-extensions/navigator for additional info on this error.
+    at get (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:6611)
+    at Object.<anonymous> (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:486184)
+    at 19534 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:504894)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 92839 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:466959)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 49424 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:465816)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 17130 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:596135)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 87631 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:576866)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 65861 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:600705)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 91577 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:856974)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 94111 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:819912)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 35187 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:690327)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 64417 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:846572)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 24847 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:828930)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 54788 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:788284)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 30729 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:682648)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 24430 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:837945)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 52584 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:811300)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 69480 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:800490)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 71535 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:680397)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1109251
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1117584
+    at Object.<anonymous> (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1117690)
+    at Module._compile (node:internal/modules/cjs/loader:1696:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1829:10)
+    at Module.load (node:internal/modules/cjs/loader:1430:32)
+    at Module._load (node:internal/modules/cjs/loader:1253:12)
+    at c._load (node:electron/js2c/node_init:2:17993)
+    at e._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+    at t._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+    at r._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+    at Module.require (node:internal/modules/cjs/loader:1452:12)
+    at require (node:internal/modules/helpers:135:16)
+    at aJ.Cb (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:240:1253)
+2025-10-11 16:35:08.977 [error] PendingMigrationError: navigator is now a global in nodejs, please see https://aka.ms/vscode-extensions/navigator for additional info on this error.
+    at get (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:6611)
+    at g (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:283829)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:283674
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:285048)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:285217
+    at Object.get (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:284567)
+    at _ (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:284134)
+    at O (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:229826)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:163430
+    at Object.p [as use] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:205291)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:206959
+    at s.<computed> [as watch] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:206970)
+    at B (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:207589)
+    at e.<computed> [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:162741)
+    at e.n [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:275397)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:170519
+    at g (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:239634)
+    at e.<computed> [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:169778)
+    at t.n [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:275397)
+    at Array.<anonymous> (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:244943)
+    at o (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:280977)
+    at u (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:244904)
+    at ge (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:213632)
+    at e.<computed> (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:216146)
+    at Object.initialize (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:276131)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:140366
+    at g (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:239634)
+    at e.<computed> [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:140291)
+    at t.n [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:275397)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:339701
+    at async t.oneDataSystemClientFactory (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:339100)
+2025-10-11 16:35:09.012 [info] [resolveAuthority(ssh-remote,1)][1ms] activating remote resolvers ssh-remote+160.153.174.255
+2025-10-11 16:35:09.012 [info] [resolveAuthority(ssh-remote,1)][1ms] activating resolver for ssh-remote+160.153.174.255...
+2025-10-11 16:35:09.013 [info] [resolveAuthority(ssh-remote,1)][2ms] invoking final resolve()...
+2025-10-11 16:35:10.015 [info] [resolveAuthority(ssh-remote,1)][1003ms] waiting...
+2025-10-11 16:35:11.016 [info] [resolveAuthority(ssh-remote,1)][2004ms] waiting...
+2025-10-11 16:35:12.015 [info] [resolveAuthority(ssh-remote,1)][3004ms] waiting...
+2025-10-11 16:35:13.016 [info] [resolveAuthority(ssh-remote,1)][4005ms] waiting...
+2025-10-11 16:35:14.017 [info] [resolveAuthority(ssh-remote,1)][5006ms] waiting...
+2025-10-11 16:35:15.016 [info] [resolveAuthority(ssh-remote,1)][6005ms] waiting...
+2025-10-11 16:35:16.016 [info] [resolveAuthority(ssh-remote,1)][7005ms] waiting...
+2025-10-11 16:35:17.017 [info] [resolveAuthority(ssh-remote,1)][8006ms] waiting...
+2025-10-11 16:35:18.018 [info] [resolveAuthority(ssh-remote,1)][9007ms] waiting...
+2025-10-11 16:35:19.019 [info] [resolveAuthority(ssh-remote,1)][10008ms] waiting...
+2025-10-11 16:35:20.019 [info] [resolveAuthority(ssh-remote,1)][11008ms] waiting...
+2025-10-11 16:35:21.020 [info] [resolveAuthority(ssh-remote,1)][12009ms] waiting...
+2025-10-11 16:35:22.021 [info] [resolveAuthority(ssh-remote,1)][13010ms] waiting...
+2025-10-11 16:35:23.022 [info] [resolveAuthority(ssh-remote,1)][14011ms] waiting...
+2025-10-11 16:35:24.023 [info] [resolveAuthority(ssh-remote,1)][15012ms] waiting...
+2025-10-11 16:35:25.024 [info] [resolveAuthority(ssh-remote,1)][16013ms] waiting...
+2025-10-11 16:35:26.024 [info] [resolveAuthority(ssh-remote,1)][17013ms] waiting...
+2025-10-11 16:35:27.025 [info] [resolveAuthority(ssh-remote,1)][18014ms] waiting...
+2025-10-11 16:35:28.025 [info] [resolveAuthority(ssh-remote,1)][19014ms] waiting...
+2025-10-11 16:35:29.026 [info] [resolveAuthority(ssh-remote,1)][20015ms] waiting...
+2025-10-11 16:35:30.026 [info] [resolveAuthority(ssh-remote,1)][21015ms] waiting...
+2025-10-11 16:35:31.027 [info] [resolveAuthority(ssh-remote,1)][22016ms] waiting...
+2025-10-11 16:35:32.028 [info] [resolveAuthority(ssh-remote,1)][23017ms] waiting...
+2025-10-11 16:35:33.029 [info] [resolveAuthority(ssh-remote,1)][24018ms] waiting...
+2025-10-11 16:35:34.029 [info] [resolveAuthority(ssh-remote,1)][25018ms] waiting...
+2025-10-11 16:35:35.030 [info] [resolveAuthority(ssh-remote,1)][26019ms] waiting...
+2025-10-11 16:35:36.030 [info] [resolveAuthority(ssh-remote,1)][27019ms] waiting...
+2025-10-11 16:35:37.030 [info] [resolveAuthority(ssh-remote,1)][28019ms] waiting...
+2025-10-11 16:35:38.030 [info] [resolveAuthority(ssh-remote,1)][29019ms] waiting...
+2025-10-11 16:35:39.030 [info] [resolveAuthority(ssh-remote,1)][30019ms] waiting...
+2025-10-11 16:35:40.031 [info] [resolveAuthority(ssh-remote,1)][31020ms] waiting...
+2025-10-11 16:35:40.635 [info] [resolveAuthority(ssh-remote,1)][31624ms] setting tunnel factory...
+2025-10-11 16:35:40.636 [info] [resolveAuthority(ssh-remote,1)][31625ms] returned managed authority
+2025-10-11 16:35:44.710 [info] Eager extensions activated
+2025-10-11 16:35:45.194 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:35:45.306 [info] ExtensionService#_doActivateExtension monokai.theme-monokai-pro-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:35:45.335 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:35:45.373 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2025-10-11 16:35:45.694 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-10-11 16:35:45.906 [info] ExtensionService#_doActivateExtension ms-vscode.remote-explorer, startup: false, activationEvent: 'onCommand:remote-internal.setActiveFolders'
+2025-10-11 16:35:52.560 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2025-10-11 18:07:49.841 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-11 18:07:49.907 [info] Extension host with pid 138290 exiting with code 0

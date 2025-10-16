@@ -1,0 +1,5 @@
+2025-10-10 15:15:19.037 [info] Marked extension as removed ms-python.debugpy-2025.10.0-linux-x64
+2025-10-10 15:15:19.038 [info] Marked extension as removed ms-python.python-2025.14.0-linux-x64
+2025-10-10 15:15:19.378 [info] Deleted marked for removal extension from disk ms-python.debugpy /home/saif/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64
+2025-10-10 15:15:19.382 [info] Deleted marked for removal extension from disk ms-python.python /home/saif/.vscode/extensions/ms-python.python-2025.14.0-linux-x64
+2025-10-10 15:15:22.787 [error] [uncaught exception in sharedProcess]: Channel name 'extensionRecommendationNotification' timed out after 1000ms

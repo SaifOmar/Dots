@@ -1,0 +1,29 @@
+2025-10-10 15:24:31.624 [info] [GitExtensionServiceImpl] Initializing Git extension service.
+2025-10-10 15:24:31.624 [info] Using the Electron fetcher.
+2025-10-10 15:24:31.624 [info] [GitExtensionServiceImpl] Successfully activated the vscode.git extension.
+2025-10-10 15:24:31.624 [info] [GitExtensionServiceImpl] Enablement state of the vscode.git extension: true.
+2025-10-10 15:24:31.624 [info] [GitExtensionServiceImpl] Successfully registered Git commit message provider.
+2025-10-10 15:24:40.301 [error] Canceled: Canceled
+    at fl (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:7:1394)
+    at file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:117058
+    at Array.forEach (<anonymous>)
+    at j4.dispose (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:116998)
+    at aJ.terminate (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10194)
+    at RP.terminate (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:914)
+    at bs (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:10410)
+    at MessagePortMain.<anonymous> (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:6949)
+    at MessagePortMain.emit (node:events:518:28)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949): Failed to get copilot token
+2025-10-10 15:24:40.301 [error] GitHub Copilot could not connect to server. Extension activation failed: "Canceled"
+2025-10-10 15:24:40.301 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2025-10-10 15:24:40.301 [error] Canceled: Canceled
+    at fl (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:7:1394)
+    at file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:117058
+    at Array.forEach (<anonymous>)
+    at j4.dispose (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:116998)
+    at aJ.terminate (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10194)
+    at RP.terminate (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:914)
+    at bs (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:10410)
+    at MessagePortMain.<anonymous> (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:6949)
+    at MessagePortMain.emit (node:events:518:28)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)

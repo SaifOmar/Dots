@@ -1,0 +1,295 @@
+2025-10-11 16:34:42.225 [info] Started local extension host with pid 137713.
+2025-10-11 16:34:49.149 [error] [Extension Host] (node:137713) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `exe --trace-warnings ...` to show where the warning was created)
+2025-10-11 16:34:49.271 [info] Extension host (LocalProcess pid: 137713) is unresponsive.
+2025-10-11 16:34:50.479 [info] [perf] Render performance baseline is 78ms
+2025-10-11 16:34:52.058 [info] Extension host (LocalProcess pid: 137713) is responsive.
+2025-10-11 16:34:53.198 [info] Settings Sync: Account status changed from uninitialized to available
+2025-10-11 16:34:53.979 [error] [Extension Host] Failed to load MSAL binary: Error: Cannot find module './msal-node-runtime'
+Require stack:
+- /opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js
+- /opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js
+	at Module._resolveFilename (node:internal/modules/cjs/loader:1372:15)
+	at n._resolveFilename (node:electron/js2c/utility_init:2:16249)
+	at t._resolveFilename (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22931)
+	at defaultResolveImpl (node:internal/modules/cjs/loader:1028:19)
+	at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1033:22)
+	at Module._load (node:internal/modules/cjs/loader:1182:37)
+	at c._load (node:electron/js2c/node_init:2:17993)
+	at e._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+	at t._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+	at r._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+	at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+	at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+	at Module.require (node:internal/modules/cjs/loader:1452:12)
+	at Module.require (/home/saif/.vscode/extensions/github.copilot-chat-0.31.5/dist/extension.js:81:36096)
+	at require (node:internal/modules/helpers:135:16)
+	at 7247 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:231600)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 9020 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:526968)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 6244 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:215773)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 3226 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:129004)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 2583 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:105051)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 8428 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:452019)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 5256 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:172891)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at /opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559691
+	at Object.<anonymous> (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559798)
+	at Module._compile (node:internal/modules/cjs/loader:1696:14)
+	at Module._extensions..js (node:internal/modules/cjs/loader:1829:10)
+	at Module.load (node:internal/modules/cjs/loader:1430:32)
+	at Module._load (node:internal/modules/cjs/loader:1253:12)
+	at c._load (node:electron/js2c/node_init:2:17993)
+	at e._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+	at t._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+	at r._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+	at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+	at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+	at Module.require (node:internal/modules/cjs/loader:1452:12)
+	at Module.require (/home/saif/.vscode/extensions/github.copilot-chat-0.31.5/dist/extension.js:81:36096)
+	at require (node:internal/modules/helpers:135:16)
+	at aJ.Cb (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:240:1253)
+2025-10-11 16:34:59.726 [info] Extension host (LocalProcess pid: 137713) is unresponsive.
+2025-10-11 16:35:02.584 [info] UNRESPONSIVE extension host: starting to profile NOW
+2025-10-11 16:35:03.161 [error] Canceled: Canceled
+    at QC (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:7:1282)
+    at vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3718:37249
+    at Array.forEach (<anonymous>)
+    at ALt.dispose (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3718:37189)
+    at sAe.dispose (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3718:48866)
+    at Ppn.dispose (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3725:7731)
+    at Npn.stopAllInReverse (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3725:7033)
+    at async gxt.tb (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:3724:15899)
+2025-10-11 16:35:05.568 [info] Started local extension host with pid 138290.
+2025-10-11 16:35:08.516 [error] navigator is now a global in nodejs, please see https://aka.ms/vscode-extensions/navigator for additional info on this error.: PendingMigrationError: navigator is now a global in nodejs, please see https://aka.ms/vscode-extensions/navigator for additional info on this error.
+    at get (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:6611)
+    at Object.<anonymous> (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:486184)
+    at 19534 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:504894)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 92839 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:466959)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 49424 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:465816)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 17130 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:596135)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 87631 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:576866)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 65861 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:600705)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 91577 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:856974)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 94111 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:819912)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 35187 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:690327)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 64417 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:846572)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 24847 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:828930)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 54788 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:788284)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 30729 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:682648)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 24430 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:837945)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 52584 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:811300)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 69480 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:800490)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at 71535 (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:680397)
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1108387)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1109251
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1117584
+    at Object.<anonymous> (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:1117690)
+    at Module._compile (node:internal/modules/cjs/loader:1696:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1829:10)
+    at Module.load (node:internal/modules/cjs/loader:1430:32)
+    at Module._load (node:internal/modules/cjs/loader:1253:12)
+    at c._load (node:electron/js2c/node_init:2:17993)
+    at e._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+    at t._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+    at r._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+    at Module.require (node:internal/modules/cjs/loader:1452:12)
+    at require (node:internal/modules/helpers:135:16)
+    at aJ.Cb (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:240:1253)
+2025-10-11 16:35:08.996 [error] navigator is now a global in nodejs, please see https://aka.ms/vscode-extensions/navigator for additional info on this error.: PendingMigrationError: navigator is now a global in nodejs, please see https://aka.ms/vscode-extensions/navigator for additional info on this error.
+    at get (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:6611)
+    at g (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:283829)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:283674
+    at r (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:285048)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:285217
+    at Object.get (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:284567)
+    at _ (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:284134)
+    at O (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:229826)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:163430
+    at Object.p [as use] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:205291)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:206959
+    at s.<computed> [as watch] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:206970)
+    at B (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:207589)
+    at e.<computed> [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:162741)
+    at e.n [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:275397)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:170519
+    at g (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:239634)
+    at e.<computed> [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:169778)
+    at t.n [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:275397)
+    at Array.<anonymous> (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:244943)
+    at o (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:280977)
+    at u (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:244904)
+    at ge (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:213632)
+    at e.<computed> (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:216146)
+    at Object.initialize (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:276131)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:140366
+    at g (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:239634)
+    at e.<computed> [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:140291)
+    at t.n [as initialize] (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:275397)
+    at /home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:339701
+    at async t.oneDataSystemClientFactory (/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/extension.js:2:339100)
+2025-10-11 16:35:09.003 [info] Invoking resolveAuthority(ssh-remote)...
+2025-10-11 16:35:09.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][0ms] obtaining proxy...
+2025-10-11 16:35:09.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][0ms] invoking...
+2025-10-11 16:35:10.041 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][1038ms] waiting...
+2025-10-11 16:35:11.005 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][2001ms] waiting...
+2025-10-11 16:35:12.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][3001ms] waiting...
+2025-10-11 16:35:13.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][4001ms] waiting...
+2025-10-11 16:35:14.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][5001ms] waiting...
+2025-10-11 16:35:15.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][6001ms] waiting...
+2025-10-11 16:35:16.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][7001ms] waiting...
+2025-10-11 16:35:17.007 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][8001ms] waiting...
+2025-10-11 16:35:18.005 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][9001ms] waiting...
+2025-10-11 16:35:19.021 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][10003ms] waiting...
+2025-10-11 16:35:20.005 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][11001ms] waiting...
+2025-10-11 16:35:21.005 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][12001ms] waiting...
+2025-10-11 16:35:22.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][13001ms] waiting...
+2025-10-11 16:35:23.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][14001ms] waiting...
+2025-10-11 16:35:24.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][15001ms] waiting...
+2025-10-11 16:35:25.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][16001ms] waiting...
+2025-10-11 16:35:26.006 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][17001ms] waiting...
+2025-10-11 16:35:27.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][18001ms] waiting...
+2025-10-11 16:35:28.005 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][19001ms] waiting...
+2025-10-11 16:35:29.005 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][20001ms] waiting...
+2025-10-11 16:35:30.006 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][21001ms] waiting...
+2025-10-11 16:35:31.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][22001ms] waiting...
+2025-10-11 16:35:32.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][23001ms] waiting...
+2025-10-11 16:35:33.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][24001ms] waiting...
+2025-10-11 16:35:34.012 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][25001ms] waiting...
+2025-10-11 16:35:35.007 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][26001ms] waiting...
+2025-10-11 16:35:36.007 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][27001ms] waiting...
+2025-10-11 16:35:37.004 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][28001ms] waiting...
+2025-10-11 16:35:38.005 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][29001ms] waiting...
+2025-10-11 16:35:39.006 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][30001ms] waiting...
+2025-10-11 16:35:40.006 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][31001ms] waiting...
+2025-10-11 16:35:41.015 [info] [LocalProcess0][resolveAuthority(ssh-remote,1)][32011ms] returned Managed(1)
+2025-10-11 16:35:41.016 [info] resolveAuthority(ssh-remote) returned 'Managed(1)' after 32012 ms
+2025-10-11 16:35:41.019 [info] Creating a socket (renderer-Management-7df54af4-6724-4fab-920a-6f65d23657e2)...
+2025-10-11 16:35:41.020 [info] Creating a socket (renderer-ExtensionHost-02f4dbc3-7fc1-41b4-a627-a57496148f7f)...
+2025-10-11 16:35:41.878 [info] Creating a socket (renderer-ExtensionHost-02f4dbc3-7fc1-41b4-a627-a57496148f7f) was successful after 858 ms.
+2025-10-11 16:35:41.882 [info] Creating a socket (renderer-Management-7df54af4-6724-4fab-920a-6f65d23657e2) was successful after 863 ms.
+2025-10-11 16:35:46.870 [info] [perf] Render performance baseline is 71ms
+2025-10-11 16:35:49.132 [info] Settings Sync: Account status changed from uninitialized to available
+2025-10-11 16:35:50.203 [info] Auto updating outdated extensions. github.copilot-chat
+2025-10-11 16:35:51.224 [error] navigator is now a global in nodejs, please see https://aka.ms/vscode-extensions/navigator for additional info on this error.: PendingMigrationError: navigator is now a global in nodejs, please see https://aka.ms/vscode-extensions/navigator for additional info on this error.
+    at get (file:///home/gobyroot/.vscode-server/cli/servers/Stable-e3a5acfb517a443235981655413d566533107e92/server/out/vs/workbench/api/node/extensionHostProcess.js:391:6611)
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:101:48518
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:101:50911
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:101:51982
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:101:54168
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:121:2591
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:122:2671
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:122:9338
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:124:21442
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:124:25509
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:124:27007
+    at /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:1:263
+    at Object.<anonymous> (/home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.4/dist/extension.js:928:5320)
+    at Module._compile (node:internal/modules/cjs/loader:1688:14)
+    at Object..js (node:internal/modules/cjs/loader:1820:10)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1246:12)
+    at e._load (file:///home/gobyroot/.vscode-server/cli/servers/Stable-e3a5acfb517a443235981655413d566533107e92/server/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+    at t._load (file:///home/gobyroot/.vscode-server/cli/servers/Stable-e3a5acfb517a443235981655413d566533107e92/server/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+    at r._load (file:///home/gobyroot/.vscode-server/cli/servers/Stable-e3a5acfb517a443235981655413d566533107e92/server/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1445:12)
+    at require (node:internal/modules/helpers:135:16)
+    at aJ.Cb (file:///home/gobyroot/.vscode-server/cli/servers/Stable-e3a5acfb517a443235981655413d566533107e92/server/out/vs/workbench/api/node/extensionHostProcess.js:240:1253)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-11 16:35:51.225 [error] [Extension Host] (node:1535214) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-10-11 16:35:52.737 [error] [Extension Host] Failed to load MSAL binary: Error: Cannot find module './msal-node-runtime'
+Require stack:
+- /opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js
+- /opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js
+	at Module._resolveFilename (node:internal/modules/cjs/loader:1372:15)
+	at n._resolveFilename (node:electron/js2c/utility_init:2:16249)
+	at t._resolveFilename (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22931)
+	at defaultResolveImpl (node:internal/modules/cjs/loader:1028:19)
+	at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1033:22)
+	at Module._load (node:internal/modules/cjs/loader:1182:37)
+	at c._load (node:electron/js2c/node_init:2:17993)
+	at e._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+	at t._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+	at r._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+	at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+	at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+	at Module.require (node:internal/modules/cjs/loader:1452:12)
+	at require (node:internal/modules/helpers:135:16)
+	at 7247 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:231600)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 9020 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:526968)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 6244 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:215773)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 3226 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:129004)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 2583 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:105051)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 8428 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:452019)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at 5256 (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:172891)
+	at n (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559324)
+	at /opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559691
+	at Object.<anonymous> (/opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js:2:559798)
+	at Module._compile (node:internal/modules/cjs/loader:1696:14)
+	at Module._extensions..js (node:internal/modules/cjs/loader:1829:10)
+	at Module.load (node:internal/modules/cjs/loader:1430:32)
+	at Module._load (node:internal/modules/cjs/loader:1253:12)
+	at c._load (node:electron/js2c/node_init:2:17993)
+	at e._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:391:5984)
+	at t._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:209:22649)
+	at r._load (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:201:25551)
+	at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+	at wrapModuleLoad (node:internal/modules/cjs/loader:242:24)
+	at Module.require (node:internal/modules/cjs/loader:1452:12)
+	at require (node:internal/modules/helpers:135:16)
+	at aJ.Cb (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:240:1253)
+2025-10-11 16:35:55.612 [info] Extension host (Remote) is unresponsive.
+2025-10-11 16:35:57.501 [warning] Failed to update in-progress status for chat session type 'claude-code': Can not find provider for claude-code
+2025-10-11 16:35:57.694 [info] Extension host (Remote) is responsive.
+2025-10-11 17:40:20.053 [error] TreeError [DebugRepl] Tree input not set: Error: TreeError [DebugRepl] Tree input not set
+    at Ag.C (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:426:29219)
+    at Ag.updateChildren (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:426:29000)
+    at qae.value (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:2538:33782)
+    at I.C (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2392)
+    at I.D (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2462)
+    at I.fire (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2680)
+    at EEe.setVisible (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:559:2730)
+    at vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:585:13938
+    at Array.map (<anonymous>)
+    at jd.setVisible (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:585:13929)

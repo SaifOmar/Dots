@@ -1,0 +1,5 @@
+2025-10-10 15:15:14.458 [info] update#setState idle
+2025-10-10 15:15:44.458 [info] update#setState checking for updates
+2025-10-10 15:15:44.491 [info] update#setState available for download
+2025-10-10 15:16:18.034 [info] Extension host with pid 67857 exited with code: 0, signal: unknown.
+2025-10-10 15:16:19.077 [error] Extension host with pid 67857 still exists, forcefully killing it...

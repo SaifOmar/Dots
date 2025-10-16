@@ -1,0 +1,177 @@
+[16:35:08.891] Log Level: 2
+[16:35:09.019] SSH Resolver called for "ssh-remote+160.153.174.255", attempt 1
+[16:35:09.036] remote.SSH.useLocalServer = true
+[16:35:09.038] remote.SSH.useExecServer = true
+[16:35:09.039] remote.SSH.bindHost = {}
+[16:35:09.039] remote.SSH.path = undefined
+[16:35:09.040] remote.SSH.configFile = undefined
+[16:35:09.041] remote.SSH.useFlock = true
+[16:35:09.042] remote.SSH.lockfilesInTmp = false
+[16:35:09.043] remote.SSH.localServerDownload = auto
+[16:35:09.044] remote.SSH.remoteServerListenOnSocket = false
+[16:35:09.044] remote.SSH.defaultExtensions = []
+[16:35:09.045] remote.SSH.defaultExtensionsIfInstalledLocally = []
+[16:35:09.046] remote.SSH.loglevel = 2
+[16:35:09.047] remote.SSH.enableDynamicForwarding = true
+[16:35:09.049] remote.SSH.enableRemoteCommand = false
+[16:35:09.049] remote.SSH.serverPickPortsFromRange = {}
+[16:35:09.050] remote.SSH.serverInstallPath = {}
+[16:35:09.051] remote.SSH.permitPtyAllocation = false
+[16:35:09.051] remote.SSH.preferredLocalPortRange = undefined
+[16:35:09.052] remote.SSH.useCurlAndWgetConfigurationFiles = false
+[16:35:09.054] remote.SSH.experimental.chat = false
+[16:35:09.055] remote.SSH.experimental.enhancedSessionLogs = false
+[16:35:09.056] remote.SSH.httpProxy = {}
+[16:35:09.057] remote.SSH.httpsProxy = {}
+[16:35:09.096] VS Code version: 1.104.2
+[16:35:09.097] Remote-SSH version: remote-ssh@0.120.0
+[16:35:09.097] linux x64
+[16:35:09.110] SSH Resolver called for host: 160.153.174.255
+[16:35:09.110] Setting up SSH remote "160.153.174.255"
+[16:35:09.135] Acquiring local install lock: /tmp/vscode-remote-ssh-967796c3-install.lock
+[16:35:09.139] Looking for existing server data file at /home/saif/.config/Code/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-967796c3-e3a5acfb517a443235981655413d566533107e92-0.120.0-es/data.json
+[16:35:09.139] No existing data file
+[16:35:09.141] Using commit id "e3a5acfb517a443235981655413d566533107e92" and quality "stable" for server
+[16:35:09.142] Extensions to install: 
+[16:35:09.197] Install and start server if needed
+[16:35:09.217] PATH: /home/saif/.local/share/mise/installs/node/22.18.0/bin:/home/saif/.local/share/omarchy/bin/:/usr/local/sbin:/usr/local/bin:/usr/bin
+[16:35:09.218] Checking ssh with "ssh -V"
+[16:35:09.403] > OpenSSH_10.0p2, OpenSSL 3.6.0 1 Oct 2025
+
+[16:35:09.413] askpass server listening on /run/user/1000/vscode-ssh-askpass-66b515a5688c23d569ae8d4c7ce810c83c00e25e.sock
+[16:35:09.414] Spawning local server with {"serverId":1,"ipcHandlePath":"/run/user/1000/vscode-ssh-askpass-d0ff5ee2327a423859b394304aec3fcce42f613c.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","45695","-o","ConnectTimeout=15","160.153.174.255"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/saif/.config/Code/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-967796c3-e3a5acfb517a443235981655413d566533107e92-0.120.0-es/data.json"}
+[16:35:09.414] Local server env: {"SHELL":"/usr/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/opt/visual-studio-code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"","VSCODE_SSH_ASKPASS_MAIN":"/home/saif/.vscode/extensions/ms-vscode-remote.remote-ssh-0.120.0/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/run/user/1000/vscode-ssh-askpass-66b515a5688c23d569ae8d4c7ce810c83c00e25e.sock"}
+[16:35:09.426] Spawned 138371
+[16:35:09.428] Using connect timeout of 17 seconds
+[16:35:09.871] > local-server-1> Running ssh connection command: ssh -v -T -D 45695 -o ConnectTimeout=15 160.153.174.255
+[16:35:09.877] > local-server-1> Spawned ssh, pid=138379
+[16:35:11.020] stderr> debug1: Server host key: ssh-ed25519 SHA256:x/tveEskIk7mrllMavWN2M+SXtBstVf41CFwjGtKNLM
+[16:35:12.326] Got askpass request: {"request":" gobyroot@160.153.174.255's password: "}
+[16:35:12.327] Showing password prompt
+[16:35:12.328] Listening for interwindow password on /run/user/1000/vscode-ssh-askpass-ce37adbbf2c3b6c57d00ebe03059a17c41ecad64.sock
+[16:35:12.328] Writing password prompt to globalState
+[16:35:36.509] Got password response
+[16:35:36.509] Interactor gave response: ************
+[16:35:36.510] Cleaning up other-window auth server
+[16:35:36.512] Using connect timeout of 17 seconds
+[16:35:37.098] stderr> Authenticated to 160.153.174.255 ([160.153.174.255]:22) using "password".
+[16:35:38.042] > Activate the web console with: systemctl enable --now cockpit.socket
+> 
+> Last failed login: Mon Oct  6 05:41:08 UTC 2025 from 197.133.163.71 on ssh:notty
+> There were 2 failed login attempts since the last successful login.
+[16:35:38.347] > ready: 95210e54b53f
+[16:35:38.648] > Linux 4.18.0-553.54.1.el8_10.x86_64 #1 SMP Tue May 27 22:49:52 EDT 2025
+[16:35:38.648] Platform: linux
+[16:35:38.908] > /bin/bash
+[16:35:38.909] Parent Shell: bash
+[16:35:38.909] Parent Shell pid: 138371
+[16:35:38.911] Waiting for subshell to start
+[16:35:38.962] Waiting for subshell to start
+[16:35:39.013] Waiting for subshell to start
+[16:35:39.064] Waiting for subshell to start
+[16:35:39.115] Waiting for subshell to start
+[16:35:39.166] Waiting for subshell to start
+[16:35:39.178] > 1535087
+[16:35:39.178] stdout -> '1535087'
+[16:35:39.179] sub-process detected
+[16:35:39.227] > 1535087
+[16:35:39.278] > 1535087
+[16:35:39.327] > 1535087
+[16:35:39.381] > 1535087
+[16:35:39.432] > 1535087
+[16:35:39.510] > 95210e54b53f: running
+> Script executing under PID: 1535087
+[16:35:39.533] > Found existing installation at /home/gobyroot/.vscode-server...
+> Starting VS Code CLI...
+[16:35:39.537] > Removing old logfile at /home/gobyroot/.vscode-server/.cli.e3a5acfb517a443235981655413d566533107e92.log
+[16:35:39.545] > Spawned remote CLI: 1535106
+[16:35:39.559] > Waiting for server log...
+[16:35:39.611] > Waiting for server log...
+[16:35:39.656] > 95210e54b53f: start
+> listeningOn==127.0.0.1:43323==
+> osReleaseId==almalinux==
+> arch==x86_64==
+> vscodeArch==x64==
+> bitness==64==
+> tmpDir==/run/user/1000==
+> platform==linux==
+> unpackResult====
+> didLocalDownload==0==
+> downloadTime====
+> installTime====
+> serverStartTime==116==
+> execServerToken==111111aa-a111-1111-a1a1-a111a1111a11==
+> platformDownloadPath==cli-alpine-x64==
+> SSH_AUTH_SOCK====
+> DISPLAY====
+> 95210e54b53f: end
+[16:35:39.657] Received install output: 
+listeningOn==127.0.0.1:43323==
+osReleaseId==almalinux==
+arch==x86_64==
+vscodeArch==x64==
+bitness==64==
+tmpDir==/run/user/1000==
+platform==linux==
+unpackResult====
+didLocalDownload==0==
+downloadTime====
+installTime====
+serverStartTime==116==
+execServerToken==111111aa-a111-1111-a1a1-a111a1111a11==
+platformDownloadPath==cli-alpine-x64==
+SSH_AUTH_SOCK====
+DISPLAY====
+
+[16:35:39.658] Remote server is listening on port 43323
+[16:35:39.658] Parsed server configuration: {"serverConfiguration":{"remoteListeningOn":{"port":43323},"osReleaseId":"almalinux","arch":"x86_64","sshAuthSock":"","display":"","tmpDir":"/run/user/1000","platform":"linux","execServerToken":"111111aa-a111-1111-a1a1-a111a1111a11"},"serverStartTime":116,"installUnpackCode":""}
+[16:35:39.660] Persisting server connection details to /home/saif/.config/Code/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-967796c3-e3a5acfb517a443235981655413d566533107e92-0.120.0-es/data.json
+[16:35:39.665] Starting forwarding server. local port 40843 -> socksPort 45695 -> remotePort 43323
+[16:35:39.665] Forwarding server listening on port 40843
+[16:35:39.666] Waiting for ssh tunnel to be ready
+[16:35:39.667] [Forwarding server port 40843] Got connection 0
+[16:35:39.672] Tunneled port 43323 to local port 40843
+[16:35:39.673] Resolved "ssh-remote+160.153.174.255" to "port 40843"
+[16:35:39.698] Initizing new exec server for ssh-remote+160.153.174.255
+[16:35:39.698] Resolving exec server at port 40843
+[16:35:39.701] [Forwarding server port 40843] Got connection 1
+[16:35:40.590] Exec server for ssh-remote+160.153.174.255 created and cached
+[16:35:40.590] Extensions to install: 
+[16:35:40.632] ------
+
+
+
+
+[16:35:40.635] No hints found in the recent session.
+[16:35:41.318] [server] Checking /home/gobyroot/.vscode-server/cli/servers/Stable-e3a5acfb517a443235981655413d566533107e92/log.txt and /home/gobyroot/.vscode-server/cli/servers/Stable-e3a5acfb517a443235981655413d566533107e92/pid.txt for a running server...
+[16:35:41.319] [server] Installing and setting up Visual Studio Code Server...
+[16:35:41.321] [server] Server setup complete
+[16:35:41.323] [server] Starting server...
+[16:35:41.359] [server] Starting server with command... Command { std: "/home/gobyroot/.vscode-server/cli/servers/Stable-e3a5acfb517a443235981655413d566533107e92/server/bin/code-server" "--connection-token=remotessh" "--accept-server-license-terms" "--start-server" "--enable-remote-auto-shutdown" "--socket-path=/tmp/code-55626c53-4f9d-4120-84a4-a3a15230746d", kill_on_drop: false }
+[16:35:41.515] [server] *
+[16:35:41.516] [server] * Visual Studio Code Server
+[16:35:41.516] [server] *
+[16:35:41.516] [server] * By using the software, you agree to
+[16:35:41.585] [server] [13:35:41] 
+[16:35:41.585] [server] 
+[16:35:41.586] [server] 
+[16:35:41.586] [server] 
+[16:35:41.729] [server] [13:35:41] Extension host agent started.
+[16:35:41.975] [server] [13:35:41] [/home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.29.0]: This extension is using the API proposal 'chatParticipantPrivate' that is not compatible with the current version of VS Code.
+[16:35:42.015] [server] [13:35:41] [/home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.29.0]: This extension is using the API proposal 'chatParticipantPrivate' that is not compatible with the current version of VS Code.
+[16:35:42.015] [server] [13:35:41] Marked extension as removed github.copilot-1.344.0
+[16:35:42.016] [server] [13:35:41] Deleted marked for removal extension from disk github.copilot-chat /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.29.0
+[16:35:42.016] [server] [13:35:41] Deleted marked for removal extension from disk github.copilot /home/gobyroot/.vscode-server/extensions/github.copilot-1.344.0
+[16:35:42.519] [server] [13:35:42] [<unknown>][02f4dbc3][ExtensionHostConnection] New connection established.
+[16:35:42.561] [server] [13:35:42] [<unknown>][7df54af4][ManagementConnection] New connection established.
+[16:35:42.678] [server] [13:35:42] [<unknown>][02f4dbc3][ExtensionHostConnection] <1535214> Launched Extension Host Process.
+[16:35:51.442] [server] [13:35:51] Getting Manifest... github.copilot-chat
+[16:35:52.529] [server] [13:35:51] Installing extension: github.copilot-chat {
+[16:35:52.530] [server]   productVersion: { version: '1.105.0', date: '2025-10-08T14:13:12.635Z' },
+[16:35:52.530] [server]   pinned: false,
+[16:35:55.653] [server] [13:35:55] Extension signature verification result for github.copilot-chat: Success. Internal Code: 0. Executed: true. Duration: 2904ms.
+[16:35:56.388] [server] [13:35:56] Extracted extension to file:///home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.5: github.copilot-chat
+[16:35:56.428] [server] [13:35:56] Renamed to /home/gobyroot/.vscode-server/extensions/github.copilot-chat-0.31.5
+[16:35:56.557] [server] [13:35:56] Marked extension as removed github.copilot-chat-0.31.4
+[16:40:41.714] [server] New EH opened, aborting shutdown
+[16:40:41.821] [server] [13:40:41] New EH opened, aborting shutdown

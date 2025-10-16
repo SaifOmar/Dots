@@ -1,0 +1,720 @@
+{
+  "version": 3,
+  "requesterUsername": "SaifOmar",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/74458012",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_4b60f3e7-ff59-4793-8e50-b95df6143add",
+      "message": {
+        "text": "go",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 2
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 3
+            },
+            "text": "go",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/saif/Dev/work/goby/delivery/views.py",
+              "external": "file:///home/saif/Dev/work/goby/delivery/views.py",
+              "path": "/home/saif/Dev/work/goby/delivery/views.py",
+              "scheme": "file"
+            },
+            "id": "file:///home/saif/Dev/work/goby/delivery/views.py",
+            "name": "views.py",
+            "omittedState": 0
+          },
+          {
+            "kind": "file",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/saif/Dev/work/goby/clients/views.py",
+              "external": "file:///home/saif/Dev/work/goby/clients/views.py",
+              "path": "/home/saif/Dev/work/goby/clients/views.py",
+              "scheme": "file"
+            },
+            "id": "file:///home/saif/Dev/work/goby/clients/views.py",
+            "name": "views.py",
+            "omittedState": 0
+          },
+          {
+            "kind": "file",
+            "id": "vscode-userdata:/home/saif/.config/Code/User/prompts/instruction.instructions.md",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/saif/.config/Code/User/prompts/instruction.instructions.md",
+              "external": "vscode-userdata:/home/saif/.config/Code/User/prompts/instruction.instructions.md",
+              "path": "/home/saif/.config/Code/User/prompts/instruction.instructions.md",
+              "scheme": "vscode-userdata"
+            },
+            "name": "instruction.instructions.md",
+            "omittedState": 0
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "I'll help modify the ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "take_order()",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 255,
+                "startColumn": 9,
+                "endLineNumber": 255,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/saif/Dev/work/goby/delivery/views.py",
+                "external": "file:///home/saif/Dev/work/goby/delivery/views.py",
+                "path": "/home/saif/Dev/work/goby/delivery/views.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "8359ccea-e070-4c7e-aa22-8feace923f52"
+        },
+        {
+          "value": " endpoint in the delivery views to support direct payment without requiring credits. Here's the implementation:\n\n````python\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/saif/Dev/work/goby/delivery/views.py",
+            "external": "file:///home/saif/Dev/work/goby/delivery/views.py",
+            "path": "/home/saif/Dev/work/goby/delivery/views.py",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "@action(\n    detail=False,\n    methods=[\"post\"],\n    authentication_classes=[ClientJWTAuthentication],\n    permission_classes=[IsApprovedDeliveryMan],\n)\ndef take_order(self, request):\n    \"\"\"\n    Allows an authenticated and approved delivery man to take an order.\n    Supports both credit-based and direct payment methods.\n    Expects:\n    - order_id: ID of the order to take\n    - latitude/longitude: Current location \n    - use_credits: Boolean to indicate payment method\n    - payment_intent_id: Required if not using credits\n    \"\"\"\n    user = request.user\n    order_id = request.data.get(\"order_id\")\n    latitude = request.data.get(\"current_latitude\")\n    longitude = request.data.get(\"current_longitude\") \n    use_credits = request.data.get(\"use_credits\", False)\n    payment_intent_id = request.data.get(\"payment_intent_id\")\n\n    if not order_id or latitude is None or longitude is None:\n        return Response(\n            {\"error\": \"Please provide 'order_id', 'latitude', and 'longitude'\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Validate coordinates\n    try:\n        latitude = float(latitude)\n        longitude = float(longitude)\n        if not (-90 <= latitude <= 90 and -180 <= longitude <= 180):\n            return Response(\n                {\"error\": \"Invalid latitude or longitude values.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n    except ValueError:\n        return Response(\n            {\"error\": \"Latitude and longitude must be valid numbers.\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Check for active deliveries\n    active_delivery_exists = Delivery.objects.filter(\n        delivery_man=user,\n        order__status__in=[\"taken\", \"delivering\"],\n    ).exists()\n\n    if active_delivery_exists:\n        return Response(\n            {\n                \"error\": \"You already have an active delivery. Complete it before taking a new one.\"\n            },\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    try:\n        order = Order.objects.get(pk=order_id)\n        client = order.client\n\n        if order.status not in [\"pending\", \"preparing\"]:\n            return Response(\n                {\"error\": \"This order is not available for delivery.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n\n        # Handle payment based on method chosen\n        if use_credits:\n            credits, created = Credits.objects.get_or_create(\n                owner=user, defaults={\"amount\": 0}\n            )\n\n            if order.total_amount() > credits.amount:\n                return Response(\n                    {\n                        \"error\": f\"Insufficient credits. Order amount is {order.total_amount()}, and you have {credits.amount} credits.\"\n                    },\n                    status=status.HTTP_402_PAYMENT_REQUIRED,\n                )\n            \n            # Deduct credits\n            credits.amount -= order.total_amount()\n            credits.save()\n            \n        else:\n            # Direct payment validation\n            if not payment_intent_id:\n                return Response(\n                    {\"error\": \"Payment intent ID is required for direct payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n            try:\n                # Verify payment with Stripe\n                stripe_intent = stripe.PaymentIntent.retrieve(payment_intent_id)\n                payment_intent = PaymentIntent.objects.get(\n                    stripe_payment_intent_id=payment_intent_id,\n                    client=user,\n                    order_id=order_id\n                )\n\n                if stripe_intent.status != \"succeeded\":\n                    return Response(\n                        {\"error\": \"Payment has not been completed.\"},\n                        status=status.HTTP_400_BAD_REQUEST,\n                    )\n\n                if payment_intent.status == \"completed\":\n                    return Response(\n                        {\"error\": \"This payment has already been used.\"},\n                        status=status.HTTP_400_BAD_REQUEST,\n                    )\n\n                # Mark payment as completed\n                payment_intent.status = \"completed\"\n                payment_intent.completed_at = timezone.now()\n                payment_intent.save()\n\n            except (stripe.error.StripeError, PaymentIntent.DoesNotExist):\n                return Response(\n                    {\"error\": \"Invalid or expired payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n        # Create delivery\n        tracking_id = str(uuid.uuid4())[:8].upper()\n        order.status = \"taken\"\n        order.save()\n\n        delivery = Delivery.objects.create(\n            tracking_id=tracking_id,\n            delivery_man=user,\n            order=order,\n            client=client,\n            current_latitude=latitude,\n            current_longitude=longitude,\n        )\n\n        # Send notifications\n        if client.fb_token:\n            message = messaging.Message(\n                data={\n                    \"title\": f\"Delivery Assigned to {user.get_name()}\",\n                    \"type\": \"delivery_update\",\n                    \"tracking_id\": delivery.tracking_id,\n                    \"status\": \"arrived_at_restaurant\",\n                },\n                notification=messaging.Notification(\n                    title=\"Delivery Update\",\n                    body=f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n                ),\n                android=messaging.AndroidConfig(\n                    priority=\"high\",\n                    notification=messaging.AndroidNotification(\n                        channel_id=\"delivery_updates\",\n                        priority=\"high\",\n                        default_sound=True,\n                    ),\n                ),\n                token=client.fb_token,\n            )\n            messaging.send(message)\n\n        # Send email notifications\n        send_mail(\n            \"Delivery Update\",\n            f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n            settings.EMAIL_HOST_USER,\n            [delivery.client.email, delivery.order.restaurant.email],\n        )\n\n        serializer = self.get_serializer(delivery)\n        return Response(serializer.data, status=status.HTTP_201_CREATED)\n\n    except Order.DoesNotExist:\n        return Response(\n            {\"error\": f\"Order with id {order_id} not found\"},\n            status=status.HTTP_404_NOT_FOUND,\n        )\n    except Exception as e:\n        return Response(\n            {\"error\": f\"An error occurred: {str(e)}\"},\n            status=status.HTTP_500_INTERNAL_SERVER_ERROR,\n        )\n````\n\nThe updated ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "take_order()",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 255,
+                "startColumn": 9,
+                "endLineNumber": 255,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/saif/Dev/work/goby/delivery/views.py",
+                "external": "file:///home/saif/Dev/work/goby/delivery/views.py",
+                "path": "/home/saif/Dev/work/goby/delivery/views.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "4fa9b2b7-16ae-49d5-adb9-a92560d55909"
+        },
+        {
+          "value": " endpoint now supports both payment methods:\n\n1. Credit-based payment (existing functionality):\n   - Set ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "use_credits=true",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 384,
+                "startColumn": 9,
+                "endLineNumber": 384,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/saif/Dev/work/goby/clients/views.py",
+                "external": "file:///home/saif/Dev/work/goby/clients/views.py",
+                "path": "/home/saif/Dev/work/goby/clients/views.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "d8a4ce22-2643-4dcb-a607-b0ae92450882"
+        },
+        {
+          "value": "\n   - System checks if user has enough credits\n   - Deducts credits upon successful order assignment\n\n2. Direct payment (new functionality):\n   - Set ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "use_credits=false",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 384,
+                "startColumn": 9,
+                "endLineNumber": 384,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/saif/Dev/work/goby/clients/views.py",
+                "external": "file:///home/saif/Dev/work/goby/clients/views.py",
+                "path": "/home/saif/Dev/work/goby/clients/views.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "bffcd997-33f2-4242-ae56-33b71d4669f1"
+        },
+        {
+          "value": "\n   - Provide ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "payment_intent_id",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 476,
+                "startColumn": 9,
+                "endLineNumber": 476,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/saif/Dev/work/goby/clients/views.py",
+                "external": "file:///home/saif/Dev/work/goby/clients/views.py",
+                "path": "/home/saif/Dev/work/goby/clients/views.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "29da080a-effd-4634-946e-47d7372cbb41"
+        },
+        {
+          "value": " from Stripe\n   - System verifies payment completion with Stripe\n   - Marks payment as used after successful verification\n\nThe flow remains the same for both methods:\n1. Validate basic requirements (coordinates, order availability)\n2. Check for active deliveries\n3. Process payment (credits or direct)\n4. Create delivery record\n5. Update order status\n6. Send notifications\n\nTo use this endpoint:\n\nFor direct payment:\n```json\nPOST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": false,\n    \"payment_intent_id\": \"pi_xxxxxxxxxxxx\"\n}\n```\n\nFor credit payment:\n```json\nPOST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": true\n}\n```\n\nThe payment intent should be created beforehand using the ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "create_payment_intent",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 377,
+                "startColumn": 9,
+                "endLineNumber": 377,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/saif/Dev/work/goby/clients/views.py",
+                "external": "file:///home/saif/Dev/work/goby/clients/views.py",
+                "path": "/home/saif/Dev/work/goby/clients/views.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "28e359a3-f2ec-4095-9223-6c9be20e0215"
+        },
+        {
+          "value": " endpoint from the Credits viewset.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_9c71891a-3262-4334-9075-c75fe4830818",
+      "result": {
+        "timings": {
+          "firstProgress": 2882,
+          "totalElapsed": 31054
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "@action(\n    detail=False,\n    methods=[\"post\"],\n    authentication_classes=[ClientJWTAuthentication],\n    permission_classes=[IsApprovedDeliveryMan],\n)\ndef take_order(self, request):\n    \"\"\"\n    Allows an authenticated and approved delivery man to take an order.\n    Supports both credit-based and direct payment methods.\n    Expects:\n    - order_id: ID of the order to take\n    - latitude/longitude: Current location \n    - use_credits: Boolean to indicate payment method\n    - payment_intent_id: Required if not using credits\n    \"\"\"\n    user = request.user\n    order_id = request.data.get(\"order_id\")\n    latitude = request.data.get(\"current_latitude\")\n    longitude = request.data.get(\"current_longitude\") \n    use_credits = request.data.get(\"use_credits\", False)\n    payment_intent_id = request.data.get(\"payment_intent_id\")\n\n    if not order_id or latitude is None or longitude is None:\n        return Response(\n            {\"error\": \"Please provide 'order_id', 'latitude', and 'longitude'\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Validate coordinates\n    try:\n        latitude = float(latitude)\n        longitude = float(longitude)\n        if not (-90 <= latitude <= 90 and -180 <= longitude <= 180):\n            return Response(\n                {\"error\": \"Invalid latitude or longitude values.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n    except ValueError:\n        return Response(\n            {\"error\": \"Latitude and longitude must be valid numbers.\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Check for active deliveries\n    active_delivery_exists = Delivery.objects.filter(\n        delivery_man=user,\n        order__status__in=[\"taken\", \"delivering\"],\n    ).exists()\n\n    if active_delivery_exists:\n        return Response(\n            {\n                \"error\": \"You already have an active delivery. Complete it before taking a new one.\"\n            },\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    try:\n        order = Order.objects.get(pk=order_id)\n        client = order.client\n\n        if order.status not in [\"pending\", \"preparing\"]:\n            return Response(\n                {\"error\": \"This order is not available for delivery.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n\n        # Handle payment based on method chosen\n        if use_credits:\n            credits, created = Credits.objects.get_or_create(\n                owner=user, defaults={\"amount\": 0}\n            )\n\n            if order.total_amount() > credits.amount:\n                return Response(\n                    {\n                        \"error\": f\"Insufficient credits. Order amount is {order.total_amount()}, and you have {credits.amount} credits.\"\n                    },\n                    status=status.HTTP_402_PAYMENT_REQUIRED,\n                )\n            \n            # Deduct credits\n            credits.amount -= order.total_amount()\n            credits.save()\n            \n        else:\n            # Direct payment validation\n            if not payment_intent_id:\n                return Response(\n                    {\"error\": \"Payment intent ID is required for direct payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n            try:\n                # Verify payment with Stripe\n                stripe_intent = stripe.PaymentIntent.retrieve(payment_intent_id)\n                payment_intent = PaymentIntent.objects.get(\n                    stripe_payment_intent_id=payment_intent_id,\n                    client=user,\n                    order_id=order_id\n                )\n\n                if stripe_intent.status != \"succeeded\":\n                    return Response(\n                        {\"error\": \"Payment has not been completed.\"},\n                        status=status.HTTP_400_BAD_REQUEST,\n                    )\n\n                if payment_intent.status == \"completed\":\n                    return Response(\n                        {\"error\": \"This payment has already been used.\"},\n                        status=status.HTTP_400_BAD_REQUEST,\n                    )\n\n                # Mark payment as completed\n                payment_intent.status = \"completed\"\n                payment_intent.completed_at = timezone.now()\n                payment_intent.save()\n\n            except (stripe.error.StripeError, PaymentIntent.DoesNotExist):\n                return Response(\n                    {\"error\": \"Invalid or expired payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n        # Create delivery\n        tracking_id = str(uuid.uuid4())[:8].upper()\n        order.status = \"taken\"\n        order.save()\n\n        delivery = Delivery.objects.create(\n            tracking_id=tracking_id,\n            delivery_man=user,\n            order=order,\n            client=client,\n            current_latitude=latitude,\n            current_longitude=longitude,\n        )\n\n        # Send notifications\n        if client.fb_token:\n            message = messaging.Message(\n                data={\n                    \"title\": f\"Delivery Assigned to {user.get_name()}\",\n                    \"type\": \"delivery_update\",\n                    \"tracking_id\": delivery.tracking_id,\n                    \"status\": \"arrived_at_restaurant\",\n                },\n                notification=messaging.Notification(\n                    title=\"Delivery Update\",\n                    body=f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n                ),\n                android=messaging.AndroidConfig(\n                    priority=\"high\",\n                    notification=messaging.AndroidNotification(\n                        channel_id=\"delivery_updates\",\n                        priority=\"high\",\n                        default_sound=True,\n                    ),\n                ),\n                token=client.fb_token,\n            )\n            messaging.send(message)\n\n        # Send email notifications\n        send_mail(\n            \"Delivery Update\",\n            f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n            settings.EMAIL_HOST_USER,\n            [delivery.client.email, delivery.order.restaurant.email],\n        )\n\n        serializer = self.get_serializer(delivery)\n        return Response(serializer.data, status=status.HTTP_201_CREATED)\n\n    except Order.DoesNotExist:\n        return Response(\n            {\"error\": f\"Order with id {order_id} not found\"},\n            status=status.HTTP_404_NOT_FOUND,\n        )\n    except Exception as e:\n        return Response(\n            {\"error\": f\"An error occurred: {str(e)}\"},\n            status=status.HTTP_500_INTERNAL_SERVER_ERROR,\n        )\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/saif/Dev/work/goby/delivery/views.py",
+                "scheme": "file"
+              },
+              "language": "python",
+              "markdownBeforeBlock": "I'll help modify the  endpoint in the delivery views to support direct payment without requiring credits. Here's the implementation:\n\n"
+            },
+            {
+              "code": "POST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": false,\n    \"payment_intent_id\": \"pi_xxxxxxxxxxxx\"\n}\n",
+              "language": "json",
+              "markdownBeforeBlock": "\nThe updated  endpoint now supports both payment methods:\n\n1. Credit-based payment (existing functionality):\n   - Set \n   - System checks if user has enough credits\n   - Deducts credits upon successful order assignment\n\n2. Direct payment (new functionality):\n   - Set \n   - Provide  from Stripe\n   - System verifies payment completion with Stripe\n   - Marks payment as used after successful verification\n\nThe flow remains the same for both methods:\n1. Validate basic requirements (coordinates, order availability)\n2. Check for active deliveries\n3. Process payment (credits or direct)\n4. Create delivery record\n5. Update order status\n6. Send notifications\n\nTo use this endpoint:\n\nFor direct payment:\n"
+            },
+            {
+              "code": "POST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": true\n}\n",
+              "language": "json",
+              "markdownBeforeBlock": "\nFor credit payment:\n"
+            }
+          ],
+          "toolCallRounds": [
+            {
+              "response": "I'll help modify the `take_order()` endpoint in the delivery views to support direct payment without requiring credits. Here's the implementation:\n\n````python\n# filepath: /home/saif/Dev/work/goby/delivery/views.py\n@action(\n    detail=False,\n    methods=[\"post\"],\n    authentication_classes=[ClientJWTAuthentication],\n    permission_classes=[IsApprovedDeliveryMan],\n)\ndef take_order(self, request):\n    \"\"\"\n    Allows an authenticated and approved delivery man to take an order.\n    Supports both credit-based and direct payment methods.\n    Expects:\n    - order_id: ID of the order to take\n    - latitude/longitude: Current location \n    - use_credits: Boolean to indicate payment method\n    - payment_intent_id: Required if not using credits\n    \"\"\"\n    user = request.user\n    order_id = request.data.get(\"order_id\")\n    latitude = request.data.get(\"current_latitude\")\n    longitude = request.data.get(\"current_longitude\") \n    use_credits = request.data.get(\"use_credits\", False)\n    payment_intent_id = request.data.get(\"payment_intent_id\")\n\n    if not order_id or latitude is None or longitude is None:\n        return Response(\n            {\"error\": \"Please provide 'order_id', 'latitude', and 'longitude'\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Validate coordinates\n    try:\n        latitude = float(latitude)\n        longitude = float(longitude)\n        if not (-90 <= latitude <= 90 and -180 <= longitude <= 180):\n            return Response(\n                {\"error\": \"Invalid latitude or longitude values.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n    except ValueError:\n        return Response(\n            {\"error\": \"Latitude and longitude must be valid numbers.\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Check for active deliveries\n    active_delivery_exists = Delivery.objects.filter(\n        delivery_man=user,\n        order__status__in=[\"taken\", \"delivering\"],\n    ).exists()\n\n    if active_delivery_exists:\n        return Response(\n            {\n                \"error\": \"You already have an active delivery. Complete it before taking a new one.\"\n            },\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    try:\n        order = Order.objects.get(pk=order_id)\n        client = order.client\n\n        if order.status not in [\"pending\", \"preparing\"]:\n            return Response(\n                {\"error\": \"This order is not available for delivery.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n\n        # Handle payment based on method chosen\n        if use_credits:\n            credits, created = Credits.objects.get_or_create(\n                owner=user, defaults={\"amount\": 0}\n            )\n\n            if order.total_amount() > credits.amount:\n                return Response(\n                    {\n                        \"error\": f\"Insufficient credits. Order amount is {order.total_amount()}, and you have {credits.amount} credits.\"\n                    },\n                    status=status.HTTP_402_PAYMENT_REQUIRED,\n                )\n            \n            # Deduct credits\n            credits.amount -= order.total_amount()\n            credits.save()\n            \n        else:\n            # Direct payment validation\n            if not payment_intent_id:\n                return Response(\n                    {\"error\": \"Payment intent ID is required for direct payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n            try:\n                # Verify payment with Stripe\n                stripe_intent = stripe.PaymentIntent.retrieve(payment_intent_id)\n                payment_intent = PaymentIntent.objects.get(\n                    stripe_payment_intent_id=payment_intent_id,\n                    client=user,\n                    order_id=order_id\n                )\n\n                if stripe_intent.status != \"succeeded\":\n                    return Response(\n                        {\"error\": \"Payment has not been completed.\"},\n                        status=status.HTTP_400_BAD_REQUEST,\n                    )\n\n                if payment_intent.status == \"completed\":\n                    return Response(\n                        {\"error\": \"This payment has already been used.\"},\n                        status=status.HTTP_400_BAD_REQUEST,\n                    )\n\n                # Mark payment as completed\n                payment_intent.status = \"completed\"\n                payment_intent.completed_at = timezone.now()\n                payment_intent.save()\n\n            except (stripe.error.StripeError, PaymentIntent.DoesNotExist):\n                return Response(\n                    {\"error\": \"Invalid or expired payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n        # Create delivery\n        tracking_id = str(uuid.uuid4())[:8].upper()\n        order.status = \"taken\"\n        order.save()\n\n        delivery = Delivery.objects.create(\n            tracking_id=tracking_id,\n            delivery_man=user,\n            order=order,\n            client=client,\n            current_latitude=latitude,\n            current_longitude=longitude,\n        )\n\n        # Send notifications\n        if client.fb_token:\n            message = messaging.Message(\n                data={\n                    \"title\": f\"Delivery Assigned to {user.get_name()}\",\n                    \"type\": \"delivery_update\",\n                    \"tracking_id\": delivery.tracking_id,\n                    \"status\": \"arrived_at_restaurant\",\n                },\n                notification=messaging.Notification(\n                    title=\"Delivery Update\",\n                    body=f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n                ),\n                android=messaging.AndroidConfig(\n                    priority=\"high\",\n                    notification=messaging.AndroidNotification(\n                        channel_id=\"delivery_updates\",\n                        priority=\"high\",\n                        default_sound=True,\n                    ),\n                ),\n                token=client.fb_token,\n            )\n            messaging.send(message)\n\n        # Send email notifications\n        send_mail(\n            \"Delivery Update\",\n            f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n            settings.EMAIL_HOST_USER,\n            [delivery.client.email, delivery.order.restaurant.email],\n        )\n\n        serializer = self.get_serializer(delivery)\n        return Response(serializer.data, status=status.HTTP_201_CREATED)\n\n    except Order.DoesNotExist:\n        return Response(\n            {\"error\": f\"Order with id {order_id} not found\"},\n            status=status.HTTP_404_NOT_FOUND,\n        )\n    except Exception as e:\n        return Response(\n            {\"error\": f\"An error occurred: {str(e)}\"},\n            status=status.HTTP_500_INTERNAL_SERVER_ERROR,\n        )\n````\n\nThe updated `take_order()` endpoint now supports both payment methods:\n\n1. Credit-based payment (existing functionality):\n   - Set `use_credits=true`\n   - System checks if user has enough credits\n   - Deducts credits upon successful order assignment\n\n2. Direct payment (new functionality):\n   - Set `use_credits=false`\n   - Provide `payment_intent_id` from Stripe\n   - System verifies payment completion with Stripe\n   - Marks payment as used after successful verification\n\nThe flow remains the same for both methods:\n1. Validate basic requirements (coordinates, order availability)\n2. Check for active deliveries\n3. Process payment (credits or direct)\n4. Create delivery record\n5. Update order status\n6. Send notifications\n\nTo use this endpoint:\n\nFor direct payment:\n```json\nPOST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": false,\n    \"payment_intent_id\": \"pi_xxxxxxxxxxxx\"\n}\n```\n\nFor credit payment:\n```json\nPOST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": true\n}\n```\n\nThe payment intent should be created beforehand using the `create_payment_intent` endpoint from the Credits viewset.",
+              "toolCalls": [],
+              "toolInputRetry": 0,
+              "id": "6037b383-9d8c-4d51-9a2a-f424935f087f"
+            }
+          ],
+          "modelMessageId": "6d39f905-40c2-4226-9090-a9544d45f8ab",
+          "responseId": "a5d655f6-ba2a-441a-bd1c-b6256f519990",
+          "sessionId": "87157e81-8174-4ca5-ab3b-e47355c3b3f3",
+          "agentId": "github.copilot.default"
+        },
+        "details": "Claude Sonnet 3.5 • 1x"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-5c389292-2172-4b66-b2f6-1a2310384f79"
+        }
+      ],
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "extensionVersion": "0.31.4",
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask or edit in context",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": false,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "SaifOmar",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/74458012",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/saif/Dev/work/goby/clients/views.py",
+            "external": "file:///home/saif/Dev/work/goby/clients/views.py",
+            "path": "/home/saif/Dev/work/goby/clients/views.py",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/saif/Dev/work/goby/delivery/views.py",
+            "external": "file:///home/saif/Dev/work/goby/delivery/views.py",
+            "path": "/home/saif/Dev/work/goby/delivery/views.py",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/saif/.config/Code/User/prompts/instruction.instructions.md",
+            "external": "vscode-userdata:/home/saif/.config/Code/User/prompts/instruction.instructions.md",
+            "path": "/home/saif/.config/Code/User/prompts/instruction.instructions.md",
+            "scheme": "vscode-userdata"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1759566753408,
+      "modelId": "copilot/claude-3.5-sonnet"
+    },
+    {
+      "requestId": "request_90ff0610-d3cc-4b79-8147-8d562c492048",
+      "message": {
+        "text": "ok but I already have the endpoints for payment, can you just use these instead ?",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 81
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 82
+            },
+            "text": "ok but I already have the endpoints for payment, can you just use these instead ?",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "value": "I understand you want to leverage the existing payment endpoints from the `CreditsViewSet`. Let's modify the `take_order()` endpoint to use them.\n\nHere's the updated version:\n\n````python\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/saif/Dev/work/goby/delivery/views.py",
+            "external": "file:///home/saif/Dev/work/goby/delivery/views.py",
+            "path": "/home/saif/Dev/work/goby/delivery/views.py",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "@action(\n    detail=False,\n    methods=[\"post\"],\n    authentication_classes=[ClientJWTAuthentication],\n    permission_classes=[IsApprovedDeliveryMan],\n)\ndef take_order(self, request):\n    \"\"\"\n    Allows an authenticated and approved delivery man to take an order.\n    Supports both credit-based and direct payment methods using existing payment endpoints.\n    Expects:\n    - order_id: ID of the order to take\n    - latitude/longitude: Current location\n    - payment_intent_id: Required for direct payment\n    - use_credits: Boolean to indicate payment method\n    \"\"\"\n    user = request.user\n    order_id = request.data.get(\"order_id\")\n    latitude = request.data.get(\"current_latitude\")\n    longitude = request.data.get(\"current_longitude\")\n    use_credits = request.data.get(\"use_credits\", False)\n    payment_intent_id = request.data.get(\"payment_intent_id\")\n\n    if not order_id or latitude is None or longitude is None:\n        return Response(\n            {\"error\": \"Please provide 'order_id', 'latitude', and 'longitude'\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Validate coordinates\n    try:\n        latitude = float(latitude)\n        longitude = float(longitude)\n        if not (-90 <= latitude <= 90 and -180 <= longitude <= 180):\n            return Response(\n                {\"error\": \"Invalid latitude or longitude values.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n    except ValueError:\n        return Response(\n            {\"error\": \"Latitude and longitude must be valid numbers.\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Check for active deliveries\n    active_delivery_exists = Delivery.objects.filter(\n        delivery_man=user,\n        order__status__in=[\"taken\", \"delivering\"],\n    ).exists()\n\n    if active_delivery_exists:\n        return Response(\n            {\n                \"error\": \"You already have an active delivery. Complete it before taking a new one.\"\n            },\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    try:\n        order = Order.objects.get(pk=order_id)\n        client = order.client\n\n        if order.status not in [\"pending\", \"preparing\"]:\n            return Response(\n                {\"error\": \"This order is not available for delivery.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n\n        # Handle payment based on method chosen\n        if use_credits:\n            # Use existing credits logic\n            credits, created = Credits.objects.get_or_create(\n                owner=user, defaults={\"amount\": 0}\n            )\n\n            if order.total_amount() > credits.amount:\n                return Response(\n                    {\n                        \"error\": f\"Insufficient credits. Order amount is {order.total_amount()}, and you have {credits.amount} credits.\"\n                    },\n                    status=status.HTTP_402_PAYMENT_REQUIRED,\n                )\n            \n            # Deduct credits\n            credits.amount -= order.total_amount()\n            credits.save()\n        else:\n            # Use existing payment confirmation endpoint\n            if not payment_intent_id:\n                return Response(\n                    {\"error\": \"Payment intent ID is required for direct payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n            # Get credits viewset instance to use confirm_payment\n            credits_viewset = CreditsViewSet()\n            credits_viewset.request = request\n\n            # Call confirm_payment with the payment intent\n            payment_response = credits_viewset.confirm_payment(request._request)\n            \n            if payment_response.status_code != status.HTTP_200_OK:\n                return payment_response\n\n        # Create delivery\n        tracking_id = str(uuid.uuid4())[:8].upper()\n        order.status = \"taken\"\n        order.save()\n\n        delivery = Delivery.objects.create(\n            tracking_id=tracking_id,\n            delivery_man=user,\n            order=order,\n            client=client,\n            current_latitude=latitude,\n            current_longitude=longitude,\n        )\n\n        # Send notifications\n        if client.fb_token:\n            message = messaging.Message(\n                data={\n                    \"title\": f\"Delivery Assigned to {user.get_name()}\",\n                    \"type\": \"delivery_update\",\n                    \"tracking_id\": delivery.tracking_id,\n                    \"status\": \"arrived_at_restaurant\",\n                },\n                notification=messaging.Notification(\n                    title=\"Delivery Update\",\n                    body=f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n                ),\n                android=messaging.AndroidConfig(\n                    priority=\"high\",\n                    notification=messaging.AndroidNotification(\n                        channel_id=\"delivery_updates\",\n                        priority=\"high\",\n                        default_sound=True,\n                    ),\n                ),\n                token=client.fb_token,\n            )\n            messaging.send(message)\n\n        send_mail(\n            \"Delivery Update\",\n            f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n            settings.EMAIL_HOST_USER,\n            [delivery.client.email, delivery.order.restaurant.email],\n        )\n\n        serializer = self.get_serializer(delivery)\n        return Response(serializer.data, status=status.HTTP_201_CREATED)\n\n    except Order.DoesNotExist:\n        return Response(\n            {\"error\": f\"Order with id {order_id} not found\"},\n            status=status.HTTP_404_NOT_FOUND,\n        )\n    except Exception as e:\n        return Response(\n            {\"error\": f\"An error occurred: {str(e)}\"},\n            status=status.HTTP_500_INTERNAL_SERVER_ERROR,\n        )\n````\n\nThe main changes are:\n1. Instead of implementing payment verification directly, we use the existing `confirm_payment` method from `CreditsViewSet`\n2. The flow remains the same, but payment processing is delegated to the existing endpoints\n\nThe process would work like this:\n\n1. First, create a payment intent using the existing `create_payment_intent` endpoint:\n```http\nPOST /api/credits/create_payment_intent/\n{\n    \"amount\": order_amount,\n    \"order_id\": \"123\"\n}\n```\n\n2. After successful client-side payment, call the `take_order` endpoint:\n```http\nPOST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": false,\n    \"payment_intent_id\": \"pi_xxxxxxxxxxxx\"\n}\n```\n\nThis approach reuses your existing payment infrastructure while adding the ability to take orders with direct payment.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/saif/Dev/work/goby/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_9de08dfb-9c34-47a8-91d8-064aa27a8c55",
+      "result": {
+        "timings": {
+          "firstProgress": 2335,
+          "totalElapsed": 26988
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "@action(\n    detail=False,\n    methods=[\"post\"],\n    authentication_classes=[ClientJWTAuthentication],\n    permission_classes=[IsApprovedDeliveryMan],\n)\ndef take_order(self, request):\n    \"\"\"\n    Allows an authenticated and approved delivery man to take an order.\n    Supports both credit-based and direct payment methods using existing payment endpoints.\n    Expects:\n    - order_id: ID of the order to take\n    - latitude/longitude: Current location\n    - payment_intent_id: Required for direct payment\n    - use_credits: Boolean to indicate payment method\n    \"\"\"\n    user = request.user\n    order_id = request.data.get(\"order_id\")\n    latitude = request.data.get(\"current_latitude\")\n    longitude = request.data.get(\"current_longitude\")\n    use_credits = request.data.get(\"use_credits\", False)\n    payment_intent_id = request.data.get(\"payment_intent_id\")\n\n    if not order_id or latitude is None or longitude is None:\n        return Response(\n            {\"error\": \"Please provide 'order_id', 'latitude', and 'longitude'\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Validate coordinates\n    try:\n        latitude = float(latitude)\n        longitude = float(longitude)\n        if not (-90 <= latitude <= 90 and -180 <= longitude <= 180):\n            return Response(\n                {\"error\": \"Invalid latitude or longitude values.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n    except ValueError:\n        return Response(\n            {\"error\": \"Latitude and longitude must be valid numbers.\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Check for active deliveries\n    active_delivery_exists = Delivery.objects.filter(\n        delivery_man=user,\n        order__status__in=[\"taken\", \"delivering\"],\n    ).exists()\n\n    if active_delivery_exists:\n        return Response(\n            {\n                \"error\": \"You already have an active delivery. Complete it before taking a new one.\"\n            },\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    try:\n        order = Order.objects.get(pk=order_id)\n        client = order.client\n\n        if order.status not in [\"pending\", \"preparing\"]:\n            return Response(\n                {\"error\": \"This order is not available for delivery.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n\n        # Handle payment based on method chosen\n        if use_credits:\n            # Use existing credits logic\n            credits, created = Credits.objects.get_or_create(\n                owner=user, defaults={\"amount\": 0}\n            )\n\n            if order.total_amount() > credits.amount:\n                return Response(\n                    {\n                        \"error\": f\"Insufficient credits. Order amount is {order.total_amount()}, and you have {credits.amount} credits.\"\n                    },\n                    status=status.HTTP_402_PAYMENT_REQUIRED,\n                )\n            \n            # Deduct credits\n            credits.amount -= order.total_amount()\n            credits.save()\n        else:\n            # Use existing payment confirmation endpoint\n            if not payment_intent_id:\n                return Response(\n                    {\"error\": \"Payment intent ID is required for direct payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n            # Get credits viewset instance to use confirm_payment\n            credits_viewset = CreditsViewSet()\n            credits_viewset.request = request\n\n            # Call confirm_payment with the payment intent\n            payment_response = credits_viewset.confirm_payment(request._request)\n            \n            if payment_response.status_code != status.HTTP_200_OK:\n                return payment_response\n\n        # Create delivery\n        tracking_id = str(uuid.uuid4())[:8].upper()\n        order.status = \"taken\"\n        order.save()\n\n        delivery = Delivery.objects.create(\n            tracking_id=tracking_id,\n            delivery_man=user,\n            order=order,\n            client=client,\n            current_latitude=latitude,\n            current_longitude=longitude,\n        )\n\n        # Send notifications\n        if client.fb_token:\n            message = messaging.Message(\n                data={\n                    \"title\": f\"Delivery Assigned to {user.get_name()}\",\n                    \"type\": \"delivery_update\",\n                    \"tracking_id\": delivery.tracking_id,\n                    \"status\": \"arrived_at_restaurant\",\n                },\n                notification=messaging.Notification(\n                    title=\"Delivery Update\",\n                    body=f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n                ),\n                android=messaging.AndroidConfig(\n                    priority=\"high\",\n                    notification=messaging.AndroidNotification(\n                        channel_id=\"delivery_updates\",\n                        priority=\"high\",\n                        default_sound=True,\n                    ),\n                ),\n                token=client.fb_token,\n            )\n            messaging.send(message)\n\n        send_mail(\n            \"Delivery Update\",\n            f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n            settings.EMAIL_HOST_USER,\n            [delivery.client.email, delivery.order.restaurant.email],\n        )\n\n        serializer = self.get_serializer(delivery)\n        return Response(serializer.data, status=status.HTTP_201_CREATED)\n\n    except Order.DoesNotExist:\n        return Response(\n            {\"error\": f\"Order with id {order_id} not found\"},\n            status=status.HTTP_404_NOT_FOUND,\n        )\n    except Exception as e:\n        return Response(\n            {\"error\": f\"An error occurred: {str(e)}\"},\n            status=status.HTTP_500_INTERNAL_SERVER_ERROR,\n        )\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/saif/Dev/work/goby/delivery/views.py",
+                "scheme": "file"
+              },
+              "language": "python",
+              "markdownBeforeBlock": "I understand you want to leverage the existing payment endpoints from the `CreditsViewSet`. Let's modify the `take_order()` endpoint to use them.\n\nHere's the updated version:\n\n"
+            },
+            {
+              "code": "POST /api/credits/create_payment_intent/\n{\n    \"amount\": order_amount,\n    \"order_id\": \"123\"\n}\n",
+              "language": "http",
+              "markdownBeforeBlock": "\nThe main changes are:\n1. Instead of implementing payment verification directly, we use the existing `confirm_payment` method from `CreditsViewSet`\n2. The flow remains the same, but payment processing is delegated to the existing endpoints\n\nThe process would work like this:\n\n1. First, create a payment intent using the existing `create_payment_intent` endpoint:\n"
+            },
+            {
+              "code": "POST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": false,\n    \"payment_intent_id\": \"pi_xxxxxxxxxxxx\"\n}\n",
+              "language": "http",
+              "markdownBeforeBlock": "\n2. After successful client-side payment, call the `take_order` endpoint:\n"
+            }
+          ],
+          "toolCallRounds": [
+            {
+              "response": "I understand you want to leverage the existing payment endpoints from the `CreditsViewSet`. Let's modify the `take_order()` endpoint to use them.\n\nHere's the updated version:\n\n````python\n# filepath: /home/saif/Dev/work/goby/delivery/views.py\n@action(\n    detail=False,\n    methods=[\"post\"],\n    authentication_classes=[ClientJWTAuthentication],\n    permission_classes=[IsApprovedDeliveryMan],\n)\ndef take_order(self, request):\n    \"\"\"\n    Allows an authenticated and approved delivery man to take an order.\n    Supports both credit-based and direct payment methods using existing payment endpoints.\n    Expects:\n    - order_id: ID of the order to take\n    - latitude/longitude: Current location\n    - payment_intent_id: Required for direct payment\n    - use_credits: Boolean to indicate payment method\n    \"\"\"\n    user = request.user\n    order_id = request.data.get(\"order_id\")\n    latitude = request.data.get(\"current_latitude\")\n    longitude = request.data.get(\"current_longitude\")\n    use_credits = request.data.get(\"use_credits\", False)\n    payment_intent_id = request.data.get(\"payment_intent_id\")\n\n    if not order_id or latitude is None or longitude is None:\n        return Response(\n            {\"error\": \"Please provide 'order_id', 'latitude', and 'longitude'\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Validate coordinates\n    try:\n        latitude = float(latitude)\n        longitude = float(longitude)\n        if not (-90 <= latitude <= 90 and -180 <= longitude <= 180):\n            return Response(\n                {\"error\": \"Invalid latitude or longitude values.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n    except ValueError:\n        return Response(\n            {\"error\": \"Latitude and longitude must be valid numbers.\"},\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    # Check for active deliveries\n    active_delivery_exists = Delivery.objects.filter(\n        delivery_man=user,\n        order__status__in=[\"taken\", \"delivering\"],\n    ).exists()\n\n    if active_delivery_exists:\n        return Response(\n            {\n                \"error\": \"You already have an active delivery. Complete it before taking a new one.\"\n            },\n            status=status.HTTP_400_BAD_REQUEST,\n        )\n\n    try:\n        order = Order.objects.get(pk=order_id)\n        client = order.client\n\n        if order.status not in [\"pending\", \"preparing\"]:\n            return Response(\n                {\"error\": \"This order is not available for delivery.\"},\n                status=status.HTTP_400_BAD_REQUEST,\n            )\n\n        # Handle payment based on method chosen\n        if use_credits:\n            # Use existing credits logic\n            credits, created = Credits.objects.get_or_create(\n                owner=user, defaults={\"amount\": 0}\n            )\n\n            if order.total_amount() > credits.amount:\n                return Response(\n                    {\n                        \"error\": f\"Insufficient credits. Order amount is {order.total_amount()}, and you have {credits.amount} credits.\"\n                    },\n                    status=status.HTTP_402_PAYMENT_REQUIRED,\n                )\n            \n            # Deduct credits\n            credits.amount -= order.total_amount()\n            credits.save()\n        else:\n            # Use existing payment confirmation endpoint\n            if not payment_intent_id:\n                return Response(\n                    {\"error\": \"Payment intent ID is required for direct payment.\"},\n                    status=status.HTTP_400_BAD_REQUEST,\n                )\n\n            # Get credits viewset instance to use confirm_payment\n            credits_viewset = CreditsViewSet()\n            credits_viewset.request = request\n\n            # Call confirm_payment with the payment intent\n            payment_response = credits_viewset.confirm_payment(request._request)\n            \n            if payment_response.status_code != status.HTTP_200_OK:\n                return payment_response\n\n        # Create delivery\n        tracking_id = str(uuid.uuid4())[:8].upper()\n        order.status = \"taken\"\n        order.save()\n\n        delivery = Delivery.objects.create(\n            tracking_id=tracking_id,\n            delivery_man=user,\n            order=order,\n            client=client,\n            current_latitude=latitude,\n            current_longitude=longitude,\n        )\n\n        # Send notifications\n        if client.fb_token:\n            message = messaging.Message(\n                data={\n                    \"title\": f\"Delivery Assigned to {user.get_name()}\",\n                    \"type\": \"delivery_update\",\n                    \"tracking_id\": delivery.tracking_id,\n                    \"status\": \"arrived_at_restaurant\",\n                },\n                notification=messaging.Notification(\n                    title=\"Delivery Update\",\n                    body=f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n                ),\n                android=messaging.AndroidConfig(\n                    priority=\"high\",\n                    notification=messaging.AndroidNotification(\n                        channel_id=\"delivery_updates\",\n                        priority=\"high\",\n                        default_sound=True,\n                    ),\n                ),\n                token=client.fb_token,\n            )\n            messaging.send(message)\n\n        send_mail(\n            \"Delivery Update\",\n            f\"Your order with tracking ID {delivery.tracking_id} has been assigned to delivery man {user.get_name()}.\",\n            settings.EMAIL_HOST_USER,\n            [delivery.client.email, delivery.order.restaurant.email],\n        )\n\n        serializer = self.get_serializer(delivery)\n        return Response(serializer.data, status=status.HTTP_201_CREATED)\n\n    except Order.DoesNotExist:\n        return Response(\n            {\"error\": f\"Order with id {order_id} not found\"},\n            status=status.HTTP_404_NOT_FOUND,\n        )\n    except Exception as e:\n        return Response(\n            {\"error\": f\"An error occurred: {str(e)}\"},\n            status=status.HTTP_500_INTERNAL_SERVER_ERROR,\n        )\n````\n\nThe main changes are:\n1. Instead of implementing payment verification directly, we use the existing `confirm_payment` method from `CreditsViewSet`\n2. The flow remains the same, but payment processing is delegated to the existing endpoints\n\nThe process would work like this:\n\n1. First, create a payment intent using the existing `create_payment_intent` endpoint:\n```http\nPOST /api/credits/create_payment_intent/\n{\n    \"amount\": order_amount,\n    \"order_id\": \"123\"\n}\n```\n\n2. After successful client-side payment, call the `take_order` endpoint:\n```http\nPOST /api/delivery/take_order/\n{\n    \"order_id\": \"123\",\n    \"current_latitude\": \"40.7128\",\n    \"current_longitude\": \"-74.0060\",\n    \"use_credits\": false,\n    \"payment_intent_id\": \"pi_xxxxxxxxxxxx\"\n}\n```\n\nThis approach reuses your existing payment infrastructure while adding the ability to take orders with direct payment.",
+              "toolCalls": [],
+              "toolInputRetry": 0,
+              "id": "d0fdba57-4e39-46ae-9427-4fc44d03c314"
+            }
+          ],
+          "modelMessageId": "6577025c-f0f0-4b9c-86e4-46c0c51fad30",
+          "responseId": "5f01610b-7d25-4e00-8586-5b9b3774edc8",
+          "sessionId": "87157e81-8174-4ca5-ab3b-e47355c3b3f3",
+          "agentId": "github.copilot.default"
+        },
+        "details": "Claude Sonnet 3.5 • 1x"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-2dccd46d-f64e-4516-a5ed-923a1a335cff"
+        }
+      ],
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "extensionVersion": "0.31.4",
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask or edit in context",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": false,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "SaifOmar",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/74458012",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timestamp": 1759566937551,
+      "modelId": "copilot/claude-3.5-sonnet"
+    }
+  ],
+  "sessionId": "9dfe178d-dc80-468d-b736-8c48c7c3cf2f",
+  "creationDate": 1759565236896,
+  "isImported": false,
+  "lastMessageDate": 1759566937551,
+  "customTitle": "Modifying take_order endpoint for direct payment integration"
+}

@@ -1,0 +1,43 @@
+# Chocolate Rosé Alacritty Theme
+
+[colors.primary]
+background = "#101318"
+foreground = "#f9dbbd"  # light-orange as main text
+
+[colors.cursor]
+cursor = "#da627d"      # blush as cursor
+text = "#101318"
+
+[colors.selection]
+background = "#2B3040"
+text = "#f9dbbd"
+
+[colors.normal]
+black   = "#161B22"
+red     = "#ffa5ab"     # salmon pink
+green   = "#f9dbbd"     # light orange (used as "green")
+yellow  = "#da627d"     # blush
+blue    = "#a53860"     # raspberry rose
+magenta = "#ffa5ab"     # salmon pink reused
+cyan    = "#da627d"     # blush reused
+white   = "#f9dbbd"     # light orange as soft white
+
+[colors.bright]
+black   = "#3A3F4C"
+red     = "#da627d"     # blush
+green   = "#f9dbbd"     # light orange
+yellow  = "#ffa5ab"     # salmon pink
+blue    = "#a53860"     # raspberry rose
+magenta = "#f9dbbd"
+cyan    = "#ffa5ab"
+white   = "#ffffff"
+
+[colors.dim]
+black   = "#101318"
+red     = "#b8536a"     # dim blush
+green   = "#d6bda0"     # dim light orange
+yellow  = "#c47b85"     # muted salmon-pink
+blue    = "#7e2e4a"     # dim raspberry-rose
+magenta = "#9e6c75"     # dusty mauve tone
+cyan    = "#9c5b64"     # faded rose
+white   = "#cbbfad"

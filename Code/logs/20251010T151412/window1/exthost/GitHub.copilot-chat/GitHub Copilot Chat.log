@@ -1,0 +1,25 @@
+2025-10-10 15:14:26.887 [info] [GitExtensionServiceImpl] Initializing Git extension service.
+2025-10-10 15:14:26.887 [info] Using the Electron fetcher.
+2025-10-10 15:14:26.887 [info] [GitExtensionServiceImpl] Successfully activated the vscode.git extension.
+2025-10-10 15:14:26.887 [info] [GitExtensionServiceImpl] Enablement state of the vscode.git extension: true.
+2025-10-10 15:14:26.887 [info] [GitExtensionServiceImpl] Successfully registered Git commit message provider.
+2025-10-10 15:14:41.501 [info] GithubAvailableEmbeddingTypesManager: Got embeddings. Primary: metis-1024-I16-Binary,text-embedding-3-small-512. Deprecated: 
+2025-10-10 15:14:41.515 [info] GithubAvailableEmbeddingTypesManager: Got embeddings. Primary: metis-1024-I16-Binary,text-embedding-3-small-512. Deprecated: 
+2025-10-10 15:14:41.515 [info] WorkspaceChunkSearchService: using embedding type metis-1024-I16-Binary
+2025-10-10 15:14:42.274 [info] Logged in as SaifOmar
+2025-10-10 15:14:42.742 [info] FetcherService: electron-fetch succeeded
+2025-10-10 15:14:42.747 [info] FetcherService: electron-fetch succeeded
+2025-10-10 15:14:42.749 [info] Got Copilot token for SaifOmar
+2025-10-10 15:14:42.805 [info] activationBlocker from 'languageModelAccess' took for 6021ms
+2025-10-10 15:14:43.836 [info] Fetched model metadata in 3485ms f4307c90-8dfd-4975-9495-1cbc81dc65f3
+2025-10-10 15:14:43.868 [info] Latest entry: ccreq:latest.copilotmd
+2025-10-10 15:14:43.868 [info] ccreq:d5db9da7.copilotmd | markdown
+2025-10-10 15:14:44.599 [info] copilot token chat_enabled: true, sku: free_limited_copilot
+2025-10-10 15:14:44.600 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-10-10 15:14:44.673 [info] Registering default platform agent...
+2025-10-10 15:14:44.677 [info] activationBlocker from 'conversationFeature' took for 7922ms
+2025-10-10 15:14:44.917 [info] BYOK: Copilot Chat known models list fetched successfully.
+2025-10-10 15:14:45.668 [info] Fetched auto model in 236ms.
+2025-10-10 15:14:50.107 [info] Refetch model metadata: Succeeded in 646ms dafc7733-93f0-4461-907d-700e66c56b6f (A6B6:328A69:BFE1DF:DEA122:68E8F8B9) using node-http with status 200.
+2025-10-10 15:14:50.895 [info] Refetch model metadata: Succeeded in 766ms 7da0e16a-68e2-4e56-8bc8-91717f452c0a (A6C2:294CEA:B9EABA:D8C0D5:68E8F8BA) using node-fetch with status 200.
+2025-10-10 15:14:51.685 [info] Refetch model metadata: Succeeded in 766ms be72d94d-ea87-4250-afeb-9a7e038e6e63 (A6D0:2D68D4:B53D14:D42863:68E8F8BB) using electron-fetch with status 200.

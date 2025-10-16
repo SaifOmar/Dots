@@ -1,0 +1,14 @@
+{
+  "environment": {
+    "executable": "/home/saif/Dev/work/goby/venv/bin/python",
+    "prefix": "/home/saif/Dev/work/goby/venv",
+    "version": "3.12.3.final.0",
+    "is64Bit": true,
+    "symlinks": [
+      "/home/saif/Dev/work/goby/venv/bin/python",
+      "/home/saif/Dev/work/goby/venv/bin/python3",
+      "/home/saif/Dev/work/goby/venv/bin/python3.12"
+    ]
+  },
+  "symlinks": []
+}

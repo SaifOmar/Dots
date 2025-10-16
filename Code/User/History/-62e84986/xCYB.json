@@ -1,0 +1,81 @@
+{
+"workbench.preferredLightColorTheme": "Kimbie Dark",
+  "workbench.preferredHighContrastLightColorTheme": "Abyss",
+  "workbench.preferredDarkColorTheme": "Abyss",
+  "workbench.colorCustomizations": {},
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "explorer.confirmDelete": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "scm.diffDecorations": "none",
+  "explorer.confirmDragAndDrop": false,
+  "gopls": {},
+  "go.toolsManagement.autoUpdate": true,
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "tabnine.experimentalAutoImports": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "php.executables": {
+    "v8.3.8": "c:/tools/php83/php.exe"
+  },
+  "editor.linkedEditing": true,
+  "svelte.enable-ts-plugin": true,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "window.customTitleBarVisibility": "windowed",
+  "editor.largeFileOptimizations": false,
+  "editor.fontSize": 17,
+  "editor.fontLigatures": true,
+  "workbench.settings.applyToAllProfiles": ["editor.fontFamily"],
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": { "fontStyle": "italic" }
+      },
+      {
+        "scope": "keyword",
+        "settings": { "fontStyle": "italic" }
+      },
+      {
+        "scope": "storage",
+        "settings": { "fontStyle": "italic" }
+      },
+      {
+        "scope": "entity.name.function",
+        "settings": { "fontStyle": "italic" }
+      },
+      {
+        "scope": "variable.language",
+        "settings": { "fontStyle": "italic" }
+      }
+    ]
+  },
+  "editor.minimap.enabled": false,
+  "workbench.sideBar.location": "right",
+  "editor.stickyScroll.enabled": false,
+  "php.inlayHints.parameters.enabled": false,
+  "php.problems.exclude": {
+    "/": ["PHP0421"]
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "php": true
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "supermaven.allowGitignore": true,
+  "workbench.colorTheme": "Rosé Pine",
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "php.validate.executablePath": "/home/saif/.config/herd-lite/bin/php",
+  "extensions.ignoreRecommendations": true
+}
